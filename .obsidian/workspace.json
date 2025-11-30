@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "5fe25e20fc615e15",
+    "type": "split",
+    "children": [
+      {
+        "id": "ed31e4f56661a548",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1e42444549bf026e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Modul 4 - Integracje z uslugami/1. Webhook.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. Webhook"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "02ec691b0bc841cf",
+    "type": "split",
+    "children": [
+      {
+        "id": "fa6ca44f6da6a20d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5ca128c23f44ee36",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Przeglądarka plików"
+            }
+          },
+          {
+            "id": "25ae1a9876377b5f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Szukaj"
+            }
+          },
+          {
+            "id": "407f83272683fb90",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Ulubione"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "066f3f1474fbf334",
+    "type": "split",
+    "children": [
+      {
+        "id": "03e6e884d75cc5ee",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62f3b2cf217ed2a1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Modul 2 - Wstep do n8n/Czym różni się trigger od akcji.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Linki zwrotne do Czym różni się trigger od akcji"
+            }
+          },
+          {
+            "id": "88d311d37d30bc7e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Modul 2 - Wstep do n8n/Czym różni się trigger od akcji.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Łącza wychodzące z Czym różni się trigger od akcji"
+            }
+          },
+          {
+            "id": "34c39f2bdc506c98",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tagi"
+            }
+          },
+          {
+            "id": "7d3fe10a94a96a3d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Wszystkie atrybuty"
+            }
+          },
+          {
+            "id": "afcb5652fc83df54",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Modul 2 - Wstep do n8n/Czym różni się trigger od akcji.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Konspekt Czym różni się trigger od akcji"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Otwórz okno szybkiego wyboru": false,
+      "graph:Otwórz graf": false,
+      "canvas:Stwórz nową tablicę": false,
+      "daily-notes:Otwórz codzienną notatkę": false,
+      "templates:Wstaw szablon": false,
+      "command-palette:Otwórz listę poleceń": false,
+      "bases:Stwórz nową bazę danych": false
+    }
+  },
+  "active": "1e42444549bf026e",
+  "lastOpenFiles": [
+    "Modul 6 - Warsztaty praktyczne/4. Telegram.md",
+    "Modul 6 - Warsztaty praktyczne/3. Google Sheet.md",
+    "Modul 6 - Warsztaty praktyczne/2. Pogoda.md",
+    "Modul 6 - Warsztaty praktyczne/1. ChatBot.md",
+    "Modul 5 - Implementacja agenta AI/4. Połączenie API i tokeny.md",
+    "Modul 5 - Implementacja agenta AI/3. Rola promptu w agencie AI.md",
+    "Modul 5 - Implementacja agenta AI/2. Rola modelu językowego.md",
+    "Modul 5 - Implementacja agenta AI/1. Czym jest agent AI w kontekście automatyzacji.md",
+    "Modul 4 - Integracje z uslugami/2.1 GCP Tworzenie porjektu.md",
+    "Modul 4 - Integracje z uslugami/2. Warsztat GCP.md",
+    "Modul 4 - Integracje z uslugami/1. Webhook.md",
+    "Modul 3 - Budujemy pierwsza automatyzacje/Przesłanie pobranych danych do wskazanego miejsca (np. komunikator firmowy).md",
+    "Modul 3 - Budujemy pierwsza automatyzacje/Utworzenie funkcji harmonogramu (Cron).md",
+    "Modul 3 - Budujemy pierwsza automatyzacje/Pobranie danych z zewnętrznego serwisu.md",
+    "Modul 3 - Budujemy pierwsza automatyzacje/Analiza działania i struktury danych.md",
+    "Modul 2 - Wstep do n8n/Przegląd popularnych node’ów.md",
+    "Modul 2 - Wstep do n8n/Po co nam n8n.md",
+    "Modul 2 - Wstep do n8n/Jak działa przepływ (flow → node → dane → kolejny node).md",
+    "Modul 2 - Wstep do n8n/Interfejs n8n i logika działania.md",
+    "Modul 2 - Wstep do n8n/Czym różni się trigger od akcji.md",
+    "Modul 1 - Wprowadzenie do automatyzacji i n8n/Przedstawienie narzędzia n8n.md",
+    "Modul 1 - Wprowadzenie do automatyzacji i n8n/Jak przeprowadzić automatyzację bez umiejętności programowania.md",
+    "Modul 1 - Wprowadzenie do automatyzacji i n8n/Czym są systemy automatyzacji no-code.md",
+    "Modul 1 - Wprowadzenie do automatyzacji i n8n/Co to jest automatyzacja.md",
+    "grafiki/m4_p1-webhook-title.png",
+    "grafiki/Gemini_Generated_Image_hiodd9hiodd9hiod.png",
+    "grafiki/m4_p9-gcp-api-biblioteki.png",
+    "grafiki/Gemini_Generated_Image_mbs9qbmbs9qbmbs9.png",
+    "grafiki/m4_p8-gcp-odbiorcy-oauth.png",
+    "grafiki/Gemini_Generated_Image_uczh8luczh8luczh.png",
+    "grafiki/m4_p7-gcp-gmail-konfiguracja.png",
+    "grafiki/Gemini_Generated_Image_eznsuoeznsuoezns.png",
+    "grafiki/m4_p6-gcp-redirect-uri.png",
+    "grafiki/Gemini_Generated_Image_l8l89hl8l89hl8l8.png",
+    "Modul 6 - Warsztaty praktyczne/5. Gemini.md",
+    "Modul 6 - Warsztaty praktyczne/6. SSH.md",
+    "Modul 6 - Warsztaty praktyczne/6. SSH",
+    "Modul 6 - Warsztaty praktyczne/10. ",
+    "Modul 6 - Warsztaty praktyczne/9. PDF converter",
+    "Modul 6 - Warsztaty praktyczne/9. ",
+    "Modul 6 - Warsztaty praktyczne/7. ",
+    "Modul 6 - Warsztaty praktyczne/6. ",
+    "Modul 6 - Warsztaty praktyczne/5. ",
+    "Modul 6 - Warsztaty praktyczne/4. ",
+    "Modul 6 - Warsztaty praktyczne/3. Sheet",
+    "Modul 6 - Warsztaty praktyczne/1. ChatBot"
+  ]
+}
