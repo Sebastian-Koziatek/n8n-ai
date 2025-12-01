@@ -1,4 +1,5 @@
-![Automatyzacja](../grafiki/m1_p1_automatyzacja.png)
+![Schemat automatyzacji](../grafiki/m1_p1-automatyzacja-schemat.png)
+
 # Co to jest automatyzacja?
 
 Automatyzacja to proces, w którym powtarzalne zadania i czynności są wykonywane przez systemy lub narzędzia, zamiast przez człowieka. Celem automatyzacji jest oszczędność czasu, ograniczenie błędów oraz zwiększenie efektywności pracy.
@@ -15,3 +16,5 @@ Przykłady automatyzacji w firmie:
 - Wykrywanie i klasyfikacja zgłoszeń klientów przez AI.
 
 Automatyzacja nie wymaga programowania – dzięki narzędziom no-code (np. n8n) każdy może tworzyć własne automaty, nawet bez wiedzy technicznej.
+
+Na tym szkoleniu będziemy budować własne automatyzacje w podejściu no-code – bez programowania, korzystając z narzędzi takich jak n8n. Każdy, nawet bez wiedzy technicznej, może stworzyć praktyczne rozwiązania automatyzujące codzienną pracę.
