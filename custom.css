@@ -4,8 +4,12 @@ body {
     color: #ffffff !important;
 }
 
-* {
-    background-color: inherit !important;
+html {
+    background-color: #191c20 !important;
+}
+
+div, section, article, main, nav {
+    background-color: transparent !important;
 }
 
 .container-lg {
