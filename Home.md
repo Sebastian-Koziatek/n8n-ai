@@ -1,6 +1,6 @@
 # n8n szkolenie
 
-Witaj w kursie automatyzacji z wykorzystaniem n8n i AI!
+![n8n Banner](https://obrazy.sadmin.pl/n8n-banner.jpg)
 
 ## Moduły kursu
 
