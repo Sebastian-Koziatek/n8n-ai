@@ -1,4 +1,4 @@
-![Pobieranie danych z zewnętrznego serwisu](../grafiki/m3_p4-pobranie-danych-zewnetrznych.png)
+![Pobieranie danych z zewnętrznego serwisu](https://obrazy.sadmin.pl/m3_p4-pobranie-danych-zewnetrznych.png)
 
 # Pobieranie danych z zewnętrznego serwisu
 

@@ -1,5 +1,5 @@
 
-![Trigger vs Akcja](../grafiki/m2_p1-trigger-vs-akcja-title.png)
+![Trigger vs Akcja](https://obrazy.sadmin.pl/m2_p1-trigger-vs-akcja-title.png)
 
 W n8n (i innych narzędziach automatyzacji) przepływ pracy składa się z różnych bloków, które pełnią określone funkcje. Najważniejsze z nich to **trigger** i **akcja**.
 

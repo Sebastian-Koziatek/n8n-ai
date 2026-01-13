@@ -1,4 +1,4 @@
-![Przesłanie pobranych danych do komunikatora](../grafiki/m3_p5-przeslanie-danych-komunikator.png)
+![Przesłanie pobranych danych do komunikatora](https://obrazy.sadmin.pl/m3_p5-przeslanie-danych-komunikator.png)
 
 # Przesłanie pobranych - kanły odbiorcze
 

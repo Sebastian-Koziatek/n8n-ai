@@ -1,6 +1,6 @@
 # Analiza działania i struktury danych
 
-![Analiza danych w n8n](../grafiki/m3_p3-analiza-danych-title.png)
+![Analiza danych w n8n](https://obrazy.sadmin.pl/m3_p3-analiza-danych-title.png)
 
 Kluczem do efektywnego tworzenia automatyzacji w n8n jest zrozumienie, jak dane przepływają między node'ami i jak je analizować. n8n oferuje wbudowane narzędzia do debugowania i inspekcji danych.
 

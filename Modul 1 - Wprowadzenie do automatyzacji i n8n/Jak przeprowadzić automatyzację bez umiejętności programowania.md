@@ -1,5 +1,5 @@
 
-![Automatyzacja bez kodowania](../grafiki/m1_p3-bez-programowania-title.png)
+![Automatyzacja bez kodowania](https://obrazy.sadmin.pl/m1_p3-bez-programowania-title.png)
 
 Wyobraź sobie, że codziennie wykonujesz te same, powtarzalne czynności: kopiujesz dane, wysyłasz powiadomienia, generujesz raporty. Zamiast tracić czas na rutynę, możesz skorzystać z narzędzi no-code i sprawić, że te zadania wykonają się same – bez pisania ani jednej linijki kodu!
 

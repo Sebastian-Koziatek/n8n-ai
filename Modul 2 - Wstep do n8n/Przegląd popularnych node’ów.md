@@ -1,8 +1,8 @@
 
-![Popularne nody](../grafiki/m2_p5-popularne-nody-title.png)
+![Popularne nody](https://obrazy.sadmin.pl/m2_p5-popularne-nody-title.png)
 
 
-![Popularne node'y w n8n](../grafiki/m2_p6-popularne-nody-title.png)
+![Popularne node'y w n8n](https://obrazy.sadmin.pl/m2_p6-popularne-nody-title.png)
 
 W n8n znajdziesz setki node'ów do integracji z różnymi usługami. Poniżej przedstawiam top 10 najpopularniejszych node'ów, ze szczególnym uwzględnieniem ekosystemu Google.
 

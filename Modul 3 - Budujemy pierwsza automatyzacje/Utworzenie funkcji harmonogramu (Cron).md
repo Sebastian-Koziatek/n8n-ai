@@ -1,6 +1,6 @@
 # Utworzenie funkcji harmonogramu (Cron)
 
-![Funkcja harmonogramu (Cron)](../grafiki/m3_p6-cron-harmonogram.png)
+![Funkcja harmonogramu (Cron)](https://obrazy.sadmin.pl/m3_p6-cron-harmonogram.png)
 
 ---
 

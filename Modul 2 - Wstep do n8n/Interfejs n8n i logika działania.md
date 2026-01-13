@@ -1,5 +1,5 @@
 
-![Interfejs n8n](../grafiki/m2_p2-interfejs-title.png)
+![Interfejs n8n](https://obrazy.sadmin.pl/m2_p2-interfejs-title.png)
 # Interfejs n8n i logika działania
 
 
