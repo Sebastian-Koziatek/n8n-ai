@@ -6,31 +6,7 @@ body {
 
 #head, #header {
     background-color: #0a0a0a !important;
-    border-bottom: 1px solid #444 !important;
-}
-
-#head a, #header a {
-    color: #ffffff !important;
-}
-
-#head .minibutton, #header .minibutton {
-    background-color: #2a2a2a !important;
-    color: #ffffff !important;
-    border: 1px solid #555 !important;
-}
-
-#head .minibutton:hover, #header .minibutton:hover {
-    background-color: #3a3a3a !important;
-}
-
-.actions a, .actions button {
-    color: #ffffff !important;
-    background-color: #1a1a1a !important;
-    border: 1px solid #444 !important;
-}
-
-.actions a:hover, .actions button:hover {
-    background-color: #2a2a2a !important;
+    border-bottom: 1px solid #222 !important;
 }
 
 #wiki-wrapper {
