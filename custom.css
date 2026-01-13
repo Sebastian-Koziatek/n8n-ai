@@ -67,6 +67,22 @@ div, section, article, main, nav {
     color: #ffffff !important;
 }
 
+.markdown-body p, .markdown-body ul, .markdown-body ol, .markdown-body li {
+    background-color: transparent !important;
+}
+
+.markdown-body img {
+    background-color: transparent !important;
+}
+
+p {
+    background-color: transparent !important;
+}
+
+ul, ol, li {
+    background-color: transparent !important;
+}
+
 #wiki-body {
     background-color: #191c20 !important;
 }
