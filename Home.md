@@ -1,6 +1,6 @@
 # n8n szkolenie
 
-![n8n Banner](/grafiki/n8n-banner.jpg)
+<img src="/grafiki/n8n-banner.jpg" alt="n8n Banner" width="50%">
 
 ## Moduły kursu
 
