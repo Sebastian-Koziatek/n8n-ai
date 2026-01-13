@@ -1,0 +1,108 @@
+/* Ciemny motyw dla Gollum Wiki */
+body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+#head, #header {
+    background-color: #0a0a0a !important;
+    border-bottom: 1px solid #222 !important;
+}
+
+#wiki-wrapper {
+    background-color: #000000 !important;
+}
+
+#wiki-content {
+    background-color: #0a0a0a !important;
+    color: #ffffff !important;
+}
+
+#wiki-content-wrapper {
+    background-color: #0a0a0a !important;
+}
+
+.markdown-body {
+    background-color: #0a0a0a !important;
+    color: #ffffff !important;
+}
+
+a {
+    color: #3b82f6 !important;
+}
+
+a:hover {
+    color: #60a5fa !important;
+}
+
+.minibutton {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border: 1px solid #333 !important;
+}
+
+.minibutton:hover {
+    background-color: #2a2a2a !important;
+}
+
+pre, code {
+    background-color: #000000 !important;
+    color: #f0f0f0 !important;
+    border: 1px solid #333 !important;
+}
+
+table {
+    background-color: #0a0a0a !important;
+    border-color: #333 !important;
+}
+
+th {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+td {
+    border-color: #333 !important;
+    background-color: #0a0a0a !important;
+}
+
+input, textarea, select {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border: 1px solid #333 !important;
+}
+
+#footer {
+    display: none !important;
+}
+
+.footer {
+    display: none !important;
+}
+
+/* Dodatkowe elementy */
+.has-rightbar {
+    background-color: #000000 !important;
+}
+
+#searchbar {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+.search {
+    background-color: #1a1a1a !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+}
+
+.breadcrumb {
+    background-color: #0a0a0a !important;
+    color: #ffffff !important;
+}
+
+.editable {
+    background-color: #0a0a0a !important;
+}
