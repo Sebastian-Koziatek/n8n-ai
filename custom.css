@@ -1,11 +1,11 @@
 /* Ciemny motyw dla Gollum Wiki */
 body {
-    background-color: #000000 !important;
+    background-color: #191c20 !important;
     color: #ffffff !important;
 }
 
 #head, #header {
-    background-color: #0a0a0a !important;
+    background-color: #191c20 !important;
     border-bottom: 1px solid #444 !important;
 }
 
@@ -14,13 +14,13 @@ body {
 }
 
 #head .minibutton, #header .minibutton {
-    background-color: #2a2a2a !important;
+    background-color: #2a2e33 !important;
     color: #ffffff !important;
     border: 1px solid #555 !important;
 }
 
 #head .minibutton:hover, #header .minibutton:hover {
-    background-color: #3a3a3a !important;
+    background-color: #3a3e43 !important;
 }
 
 .actions a, .actions button {
@@ -29,8 +29,105 @@ body {
     border: 1px solid #444 !important;
 }
 
-.actions a:hover, .actions button:hover {
+.actions a, .actions button:hover {
     background-color: #2a2a2a !important;
+}
+
+#wiki-wrapper {
+    background-color: #191c20 !important;
+}
+
+#wiki-content {
+    background-color: #191c20 !important;
+    color: #ffffff !important;
+}
+
+#wiki-content-wrapper {
+    background-color: #191c20 !important;
+}
+
+.markdown-body {
+    background-color: #191c20 !important;
+    color: #ffffff !important;
+}
+
+a {
+    color: #3b82f6 !important;
+}
+
+a:hover {
+    color: #60a5fa !important;
+}
+
+.minibutton {
+    background-color: #2a2e33 !important;
+    color: #ffffff !important;
+    border: 1px solid #555 !important;
+}
+
+.minibutton:hover {
+    background-color: #3a3e43 !important;
+}
+
+pre, code {
+    background-color: #0d0f12 !important;
+    color: #f0f0f0 !important;
+    border: 1px solid #333 !important;
+}
+
+table {
+    background-color: #191c20 !important;
+    border-color: #333 !important;
+}
+
+th {
+    background-color: #2a2e33 !important;
+    color: #ffffff !important;
+}
+
+td {
+    border-color: #333 !important;
+    background-color: #191c20 !important;
+}
+
+input, textarea, select {
+    background-color: #2a2e33 !important;
+    color: #ffffff !important;
+    border: 1px solid #333 !important;
+}
+
+#footer {
+    display: none !important;
+}
+
+.footer {
+    display: none !important;
+}
+
+.has-rightbar {
+    background-color: #191c20 !important;
+}
+
+#searchbar {
+    background-color: #2a2e33 !important;
+    color: #ffffff !important;
+}
+
+.search {
+    background-color: #2a2e33 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+}
+
+.breadcrumb {
+    background-color: #191c20 !important;
+    color: #ffffff !important;
+}
+
+.editable {
+    background-color: #191c20 !important;
 }
 
 #wiki-wrapper {
