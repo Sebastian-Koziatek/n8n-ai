@@ -1,6 +1,6 @@
 # n8n szkolenie
 
-![n8n Banner](https://obrazy.sadmin.pl/n8n-banner.jpg)
+![n8n Banner](/grafiki/n8n-banner.jpg)
 
 ## Moduły kursu
 
