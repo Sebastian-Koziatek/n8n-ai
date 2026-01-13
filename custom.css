@@ -85,7 +85,7 @@ input, textarea, select {
     color: #3b82f6 !important;
 }
 
-#footer #last-edit, #footer #delete-link {
+#footer #last-edit, #footer #delete-link, #footer #page-info-toggle, #footer p:has(#page-info-toggle), #footer p:has(#delete-link) {
     display: none !important;
 }
 
