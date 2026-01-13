@@ -1,4 +1,4 @@
-# Kurs n8n-ai
+# n8n szkolenie
 
 Witaj w kursie automatyzacji z wykorzystaniem n8n i AI!
 
