@@ -51,6 +51,22 @@ body {
     color: #ffffff !important;
 }
 
+#wiki-body {
+    background-color: #191c20 !important;
+}
+
+.page {
+    background-color: #191c20 !important;
+}
+
+article {
+    background-color: #191c20 !important;
+}
+
+.content {
+    background-color: #191c20 !important;
+}
+
 a {
     color: #3b82f6 !important;
 }
