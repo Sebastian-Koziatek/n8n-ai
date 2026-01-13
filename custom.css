@@ -151,15 +151,17 @@ input, textarea, select {
 
 h1, h2, h3, h4, h5, h6 {
     color: #ffffff !important;
-}
-
-.breadcrumb {
-    background-color: #191c20 !important;
-    color: #ffffff !important;
+    background-color: transparent !important;
+    border-bottom-color: #444 !important;
 }
 
 .editable {
-    background-color: #191c20 !important;
+    background-color: transparent !important;
+}
+
+.breadcrumb {
+    background-color: transparent !important;
+    color: #ffffff !important;
 }
 
 #wiki-wrapper {
