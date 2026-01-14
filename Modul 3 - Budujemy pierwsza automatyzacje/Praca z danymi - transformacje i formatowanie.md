@@ -1,579 +1,344 @@
 # Praca z danymi - transformacje i formatowanie
 
-W n8n dane przepływają między node'ami i często wymagają przekształcenia, filtrowania lub formatowania. W tej lekcji nauczysz się, jak manipulować danymi, aby dostosować je do wymagań następnych kroków w workflow.
+W n8n dane przepływają między node'ami jak wiadomości - każdy node odbiera informacje, przetwarza je i przekazuje dalej. Często te dane trzeba przekształcić, oczyścić lub odpowiednio sformatować, zanim trafią do miejsca docelowego.
+
+W tej lekcji nauczysz się, jak przygotowywać dane tak, aby wyglądały dobrze w emailu, komunikatorze czy arkuszu kalkulacyjnym.
 
 ---
 
-## Struktura danych w n8n
+## Po co przetwarzać dane?
 
-Dane w n8n przepływają jako **obiekty JSON**. Każdy node otrzymuje dane z poprzedniego node'a i przekazuje je dalej.
+Wyobraź sobie, że pobierasz dane z systemu CRM o nowym kliencie. System zwraca Ci:
+- `firstName`: Jan
+- `lastName`: Kowalski  
+- `emailAddress`: JAN.KOWALSKI@EXAMPLE.COM
+- `createdAt`: 2026-01-14T10:30:00Z
 
-### Podstawowa struktura
+Ale chcesz wysłać powitalnego maila, który wygląda profesjonalnie:
+- Pełne imię i nazwisko razem: "Jan Kowalski"
+- Email małymi literami: "jan.kowalski@example.com"
+- Data w polskim formacie: "14.01.2026"
 
-Każdy item (element danych) w n8n ma strukturę:
-
-```json
-{
-  "json": {
-    "name": "Jan Kowalski",
-    "email": "jan@example.com",
-    "age": 30
-  },
-  "binary": {}
-}
-```
-
-- **json** - główne dane w formacie JSON
-- **binary** - dane binarne (pliki, obrazy)
-
-### Dostęp do danych
-
-W expressions używasz:
-- `{{ $json.name }}` - wartość pola "name"
-- `{{ $json.email }}` - wartość pola "email"
-- `{{ $json.address.city }}` - zagnieżdżone pola
+To właśnie jest transformacja danych - przygotowanie ich do użycia.
 
 ---
 
-## Node Set - transformacja danych
+## Node Set - podstawowe przekształcanie
 
-**Set node** to podstawowe narzędzie do przekształcania danych. Pozwala:
-- Zmienić nazwy pól
-- Dodać nowe pola
-- Usunąć niepotrzebne pola
-- Przekształcić wartości
-- Połączyć dane z różnych źródeł
+**Node Set** to narzędzie do szybkich zmian w danych. Możesz nim:
+- Połączyć kilka pól w jedno (np. imię + nazwisko = pełne imię)
+- Zmienić nazwy pól na bardziej zrozumiałe
+- Usunąć niepotrzebne informacje
+- Przeliczyć wartości (np. dolary na złotówki)
 
-### Praktyka: Set node
-
-**Scenariusz:** Masz dane użytkownika i chcesz przygotować je do wysłania emailem.
-
-**Dane wejściowe:**
-```json
-{
-  "firstName": "Jan",
-  "lastName": "Kowalski",
-  "emailAddress": "jan@example.com",
-  "createdAt": "2026-01-14T10:30:00Z"
-}
-```
-
-**Konfiguracja Set node:**
-
-1. **Keep Only Set Fields** - zachowaj tylko wybrane pola
-2. Dodaj pola:
-
-**Pole 1:**
-- Name: `fullName`
-- Value: `{{ $json.firstName }} {{ $json.lastName }}`
-
-**Pole 2:**
-- Name: `email`
-- Value: `{{ $json.emailAddress }}`
-
-**Pole 3:**
-- Name: `registrationDate`
-- Value: `{{ $json.createdAt.split('T')[0] }}`
-
-**Wynik:**
-```json
-{
-  "fullName": "Jan Kowalski",
-  "email": "jan@example.com",
-  "registrationDate": "2026-01-14"
-}
-
-```
-
-### Operacje na danych w Set
-
-**Łączenie tekstu:**
-```javascript
-{{ $json.firstName + " " + $json.lastName }}
-```
-
-**Formatowanie liczb:**
-```javascript
-{{ $json.price.toFixed(2) }} PLN
-```
-
-**Data i czas:**
-```javascript
-{{ $now.format('DD.MM.YYYY') }}
-{{ $json.createdAt.toDateTime().toFormat('yyyy-MM-dd HH:mm') }}
-```
-
-**Warunki (ternary operator):**
-```javascript
-{{ $json.age >= 18 ? "Pełnoletni" : "Niepełnoletni" }}
-```
+**Przykład użycia:**
+Masz dane z formularza: `firstName`, `lastName`, ale w emailu chcesz użyć `fullName`. W node Set po prostu łączysz te dwa pola w jedno.
 
 ---
 
-## Node Code - zaawansowane transformacje
+## Node IF - rozdzielanie danych
 
-Gdy Set node nie wystarcza, użyj **Code node** do pisania JavaScript.
+**Node IF** działa jak rozjazd na drodze - dane mogą pójść w dwie różne strony w zależności od warunków.
 
-### Przykład 1: Formatowanie danych
+**Praktyczny przykład:**
+- Jeśli klient zamówił za więcej niż 500 zł → wyślij mu voucher rabatowy
+- Jeśli zamówił za mniej → wyślij standardowe podziękowanie
 
-```javascript
-// Pobierz dane z poprzedniego node'a
-const items = $input.all();
-
-// Przekształć dane
-const transformed = items.map(item => {
-  return {
-    json: {
-      fullName: `${item.json.firstName} ${item.json.lastName}`.toUpperCase(),
-      email: item.json.email.toLowerCase(),
-      age: item.json.age,
-      status: item.json.age >= 18 ? 'adult' : 'minor',
-      registeredOn: new Date(item.json.createdAt).toLocaleDateString('pl-PL')
-    }
-  };
-});
-
-return transformed;
-```
-
-### Przykład 2: Filtrowanie danych
-
-```javascript
-const items = $input.all();
-
-// Filtruj tylko użytkowników powyżej 18 lat
-const adults = items.filter(item => item.json.age >= 18);
-
-return adults;
-```
-
-### Przykład 3: Grupowanie danych
-
-```javascript
-const items = $input.all();
-
-// Grupuj użytkowników po mieście
-const grouped = items.reduce((acc, item) => {
-  const city = item.json.city;
-  if (!acc[city]) {
-    acc[city] = [];
-  }
-  acc[city].push(item.json);
-  return acc;
-}, {});
-
-// Zwróć jako array
-return [{
-  json: grouped
-}];
-```
+To samo narzędzie możesz użyć do filtrowania - np. wysyłaj powiadomienia tylko o zamówieniach ze statusem "opłacone".
 
 ---
 
-## Node IF - logika warunkowa
+## Merge i Split - łączenie i rozdzielanie
 
-**IF node** pozwala na rozdzielenie przepływu danych na podstawie warunków.
+**Node Merge** łączy dane z dwóch źródeł - jak sklejanie dwóch tabel w Excelu.
 
-### Przykład: Filtrowanie według wieku
+**Przykład:** 
+Masz listę klientów i listę ich ostatnich zamówień. Merge połączy je tak, że przy każdym kliencie będziesz miał informację o jego zamówieniu.
 
-**Konfiguracja:**
-- **Conditions:** `{{ $json.age }}` >= 18
-
-**Wynik:**
-- **True** - osoby pełnoletnie idą jedną ścieżką
-- **False** - niepełnoletnie drugą
-
-### Zaawansowane warunki
-
-**Sprawdzenie czy email zawiera domenę:**
-```javascript
-{{ $json.email.includes("@gmail.com") }}
-```
-
-**Sprawdzenie czy wartość jest pusta:**
-```javascript
-{{ $json.phone !== "" && $json.phone !== null }}
-```
-
-**Multiple conditions:**
-```javascript
-{{ $json.age >= 18 && $json.country === "Poland" }}
-```
-
----
-
-## Formatowanie danych do wysyłki
-
-### Email - HTML format
-
-Większość nowoczesnych klientów email obsługuje HTML. To pozwala na:
-- Formatowanie tekstu (pogrubienie, kolory, czcionki)
-- Dodawanie linków i przycisków
-- Strukturyzowanie treści (tabele, listy)
-- Obrazki i banery
-- Responsywność (dopasowanie do mobile)
-
-### Prosty email HTML w n8n
-
-**Node: Send Email (lub Gmail/Outlook)**
-
-**Subject:**
-```
-Witaj {{ $json.firstName }}!
-```
-
-**Message (HTML):**
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-    .header { background: #4CAF50; color: white; padding: 20px; text-align: center; }
-    .content { padding: 20px; background: #f9f9f9; }
-    .button { background: #4CAF50; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; display: inline-block; margin: 10px 0; }
-    .footer { text-align: center; padding: 20px; font-size: 12px; color: #666; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <h1>Witamy w naszym serwisie!</h1>
-    </div>
-    
-    <div class="content">
-      <h2>Cześć {{ $json.firstName }}!</h2>
-      <p>Dziękujemy za rejestrację. Twoje konto zostało utworzone pomyślnie.</p>
-      
-      <p><strong>Twoje dane:</strong></p>
-      <ul>
-        <li>Email: {{ $json.email }}</li>
-        <li>Data rejestracji: {{ $json.registrationDate }}</li>
-      </ul>
-      
-      <p>Kliknij poniższy przycisk, aby aktywować konto:</p>
-      <a href="https://example.com/activate?token={{ $json.token }}" class="button">
-        Aktywuj konto
-      </a>
-      
-      <p>Jeśli przycisk nie działa, skopiuj poniższy link:</p>
-      <p>https://example.com/activate?token={{ $json.token }}</p>
-    </div>
-    
-    <div class="footer">
-      <p>© 2026 Twoja Firma. Wszelkie prawa zastrzeżone.</p>
-      <p>Nie odpowiadaj na tego maila.</p>
-    </div>
-  </div>
-</body>
-</html>
-```
-
-### Zachowanie formatowania
-
-**Ważne zasady:**
-- Używaj inline CSS (style w tagu) dla lepszej kompatybilności
-- Testuj na różnych klientach email (Gmail, Outlook, Apple Mail)
-- Zachowaj max szerokość 600px (standard dla mobile)
-- Dodaj alt text dla obrazków
-- Zawsze dodaj wersję plain text jako fallback
-
-### Email plain text (fallback)
-
-Niektórzy użytkownicy blokują HTML. Zawsze dodaj wersję tekstową:
-
-```
-Witaj {{ $json.firstName }}!
-
-Dziękujemy za rejestrację. Twoje konto zostało utworzone pomyślnie.
-
-Twoje dane:
-- Email: {{ $json.email }}
-- Data rejestracji: {{ $json.registrationDate }}
-
-Aby aktywować konto, odwiedź:
-https://example.com/activate?token={{ $json.token }}
-
----
-© 2026 Twoja Firma
-```
-
----
-
-## Formatowanie dla komunikatorów
-
-### Slack - Markdown
-
-Slack używa własnej składni Markdown:
-
-```
-*Nowy użytkownik zarejestrowany!*
-
-👤 *Imię:* {{ $json.firstName }} {{ $json.lastName }}
-📧 *Email:* {{ $json.email }}
-📅 *Data:* {{ $json.registrationDate }}
-
-<https://admin.example.com/users/{{ $json.userId }}|Zobacz profil>
-```
-
-**Formatowanie:**
-- `*pogrubienie*` - pogrubiony tekst
-- `_kursywa_` - kursywa
-- `~przekreślenie~` - przekreślenie
-- `` `kod` `` - inline code
-- `\n` - nowa linia
-- `>` - cytat (quote block)
-- Emoji: `:smile:`, `:fire:`, `:check:`
-
-### Discord - Markdown
-
-```
-**Nowa rejestracja!**
-
-**Użytkownik:** {{ $json.firstName }} {{ $json.lastName }}
-**Email:** {{ $json.email }}
-**Data:** {{ $json.registrationDate }}
-
-[Zobacz profil](https://admin.example.com/users/{{ $json.userId }})
-```
-
-### Telegram - HTML
-
-Telegram obsługuje HTML:
-
-```html
-<b>Nowa rejestracja!</b>
-
-<b>Użytkownik:</b> {{ $json.firstName }} {{ $json.lastName }}
-<b>Email:</b> {{ $json.email }}
-<b>Data:</b> {{ $json.registrationDate }}
-
-<a href="https://admin.example.com/users/{{ $json.userId }}">Zobacz profil</a>
-```
-
----
-
-## Tabele w email HTML
-
-Wysyłanie danych tabelarycznych:
-
-```html
-<table style="width: 100%; border-collapse: collapse;">
-  <thead>
-    <tr style="background: #4CAF50; color: white;">
-      <th style="padding: 10px; text-align: left;">Produkt</th>
-      <th style="padding: 10px; text-align: right;">Cena</th>
-      <th style="padding: 10px; text-align: right;">Ilość</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="border-bottom: 1px solid #ddd;">
-      <td style="padding: 10px;">{{ $json.productName }}</td>
-      <td style="padding: 10px; text-align: right;">{{ $json.price }} PLN</td>
-      <td style="padding: 10px; text-align: right;">{{ $json.quantity }}</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-### Pętla przez wiele produktów w Code node
-
-```javascript
-const items = $input.all();
-
-let rows = items.map(item => `
-  <tr style="border-bottom: 1px solid #ddd;">
-    <td style="padding: 10px;">${item.json.productName}</td>
-    <td style="padding: 10px; text-align: right;">${item.json.price} PLN</td>
-    <td style="padding: 10px; text-align: right;">${item.json.quantity}</td>
-  </tr>
-`).join('');
-
-const html = `
-<table style="width: 100%; border-collapse: collapse;">
-  <thead>
-    <tr style="background: #4CAF50; color: white;">
-      <th style="padding: 10px; text-align: left;">Produkt</th>
-      <th style="padding: 10px; text-align: right;">Cena</th>
-      <th style="padding: 10px; text-align: right;">Ilość</th>
-    </tr>
-  </thead>
-  <tbody>
-    ${rows}
-  </tbody>
-</table>
-`;
-
-return [{ json: { html: html } }];
-```
-
----
-
-## Merge i Split - łączenie danych
-
-### Node Merge
-
-Łączy dane z dwóch źródeł:
-
-**Mode 1: Append** - dodaje dane jeden pod drugim
-**Mode 2: Merge By Key** - łączy po kluczu (jak JOIN w SQL)
-
-**Przykład Merge By Key:**
-- Dane 1: Użytkownicy (id, name, email)
-- Dane 2: Zamówienia (userId, product, price)
-- Key: `id` = `userId`
-- Wynik: Użytkownicy z ich zamówieniami
-
-### Node Split
-
-Dzieli jeden item na wiele:
-
-**Split Out:** JSON Array
-- Jeśli masz array w jednym item, split rozdzieli go na wiele items
+**Node Split** robi odwrotnie - jeśli masz jeden duży zbiór danych, może go rozdzielić na mniejsze części.
 
 **Przykład:**
-```json
-{
-  "users": [
-    { "name": "Jan", "email": "jan@example.com" },
-    { "name": "Anna", "email": "anna@example.com" }
-  ]
-}
+Otrzymujesz listę 10 użytkowników naraz, ale chcesz dla każdego wysłać osobnego maila. Split przekształci jeden zestaw z 10 osobami na 10 osobnych zestawów danych.
+
+---
+
+## Formatowanie email - HTML vs zwykły tekst
+
+### Dlaczego HTML?
+
+Współczesne maile to nie tylko prosty tekst. Większość klientów email (Gmail, Outlook, Apple Mail) obsługuje **format HTML** - czyli te same technologie, które tworzą strony internetowe.
+
+Dzięki temu w emailu możesz mieć:
+- **Ładne czcionki i kolory** - nie tylko czarny tekst
+- **Przyciski** - kolorowe, wyróżnione, klikalne
+- **Tabele** - przejrzyste zestawienia danych
+- **Obrazki i logo** - profesjonalny wygląd
+- **Linki** - wyróżnione i łatwe do kliknięcia
+
+### Różnica między zwykłym tekstem a HTML
+
+**Email tekstowy:**
+```
+Witaj Jan!
+
+Dziekujemy za rejestracje.
+Twoje dane:
+- Email: jan@example.com
+- Data: 14.01.2026
+
+Kliknij link aby aktywowac konto:
+https://example.com/activate?token=abc123
 ```
 
-Po Split Out → `users` będzie 2 items (Jan, Anna)
+Wygląda prosto, bez żadnych udzików. Działa zawsze, ale nie przykuwa uwagi.
 
----
+**Ten sam email w HTML:**
 
-## Node Filter - filtrowanie danych
+Będzie miał:
+- Kolorowy nagłówek z Twoim logo
+- Ładną czcionkę i odstępy
+- Zielony przycisk "Aktywuj konto"
+- Dane w czytelnej ramce
+- Stopkę z informacjami o firmie
 
-Usuwa items, które nie spełniają warunku.
+To jak różnica między czarno-białą gazetą a kolorowym magazynem.
 
-**Przykład 1: Tylko aktywni użytkownicy**
-- Condition: `{{ $json.status }}` equals `active`
+### Struktura email HTML
 
-**Przykład 2: Tylko duże zamówienia**
-- Condition: `{{ $json.orderValue }}` > 1000
+Email HTML ma trzy części:
 
-**Przykład 3: Email z określonej domeny**
-- Condition: `{{ $json.email.endsWith("@company.com") }}`
+**1. Nagłówek (Header)**
+Zazwyczaj z logo firmy, tytułem. Często w kolorze firmowym. To pierwsze, co widzi odbiorca.
 
----
+**2. Treść (Content)**
+Główna wiadomość - powitanie, informacje, dane. Tutaj przekazujesz najważniejszą treść.
 
-## Praktyczny workflow: Newsletter z formatowaniem
+**3. Stopka (Footer)**
+Informacje o firmie, dane kontaktowe, link do wypisania się z newslettera. Mniejsza czcionka, mniej wyróżniona.
 
-**Scenariusz:** Codziennie wysyłaj newsletter z nowymi artykułami
+### Ważne: zachowanie formatowania
 
-**Node 1: Schedule Trigger**
-- Codziennie o 8:00
+Klienci email nie działają jak przeglądarki - są bardziej wymagający. Dlatego:
 
-**Node 2: HTTP Request**
-- Pobierz artykuły z API
-
-**Node 3: Filter**
-- Tylko artykuły z dzisiaj
-- `{{ $json.publishedAt.split('T')[0] }}` equals `{{ $today.format('yyyy-MM-dd') }}`
-
-**Node 4: Code - Generuj HTML**
-```javascript
-const articles = $input.all();
-
-const articlesList = articles.map(item => `
-  <div style="margin-bottom: 30px; padding: 20px; background: #f5f5f5; border-left: 4px solid #4CAF50;">
-    <h3 style="margin: 0 0 10px 0;">
-      <a href="${item.json.url}" style="color: #333; text-decoration: none;">
-        ${item.json.title}
-      </a>
-    </h3>
-    <p style="color: #666; margin: 0 0 10px 0;">
-      ${item.json.description}
-    </p>
-    <a href="${item.json.url}" style="color: #4CAF50; text-decoration: none; font-weight: bold;">
-      Czytaj więcej →
-    </a>
-  </div>
-`).join('');
-
-const html = `
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1 style="color: #4CAF50;">Dziś w naszym blogu</h1>
-    <p>Witaj! Oto najnowsze artykuły z naszego bloga:</p>
-    ${articlesList}
-    <hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
-    <p style="font-size: 12px; color: #666; text-align: center;">
-      © 2026 Twoja Firma | <a href="https://example.com/unsubscribe">Wypisz się</a>
-    </p>
-  </div>
-</body>
-</html>
-`;
-
-return [{
-  json: {
-    html: html,
-    articlesCount: articles.length
-  }
-}];
+**Inline CSS** - style muszą być wpisane bezpośrednio w tagi HTML, nie w osobnym pliku
+```
+<div style="color: red; font-size: 16px;">
 ```
 
-**Node 5: Gmail/Send Email**
-- To: lista subskrybentów
-- Subject: `Dziś w blogu: {{ $json.articlesCount }} nowych artykułów`
-- Body: `{{ $json.html }}`
-- Format: HTML
+**Szerokość 600px** - to standard. Większość ekranów email pokazuje maile w takiej szerokości. Na telefonie automatycznie się dopasuje.
+
+**Testuj!** - Gmail pokazuje email inaczej niż Outlook. Zawsze sprawdź na różnych urządzeniach.
 
 ---
 
-## Dobre praktyki formatowania
+## Email - plain text jako bezpiecznik
 
-**Email HTML:**
-- Używaj inline CSS
-- Max szerokość 600px
-- Testuj na różnych klientach
-- Zawsze dodaj plain text fallback
-- Dodaj link "Wypisz się"
-- Responsive design (media queries)
+Nie wszyscy odbiorcy mają włączone HTML. Niektóre firmy blokują HTML ze względów bezpieczeństwa. Dlatego zawsze **dodaj wersję tekstową** (plain text) jako backup.
 
-**Komunikatory:**
-- Używaj natywnego formatowania (Markdown dla Slacka)
-- Dodaj emoji dla lepszej czytelności
-- Krótkie, zwięzłe wiadomości
-- Linki zawsze z opisem
-
-**Ogólne:**
-- Escapuj HTML jeśli dane pochodzą od użytkowników
-- Validuj dane przed wysłaniem
-- Loguj błędy formatowania
-- Testuj na prawdziwych danych
+Jeśli HTML się nie wyświetli, odbiorca zobaczy wersję tekstową. To jak napisy w filmie - nie zawsze potrzebne, ale jak trzeba, to są.
 
 ---
 
-## Debugowanie formatowania
+## Formatowanie w komunikatorach
 
-**Problem: Email wygląda źle**
-1. Sprawdź HTML w Code node (Output)
-2. Testuj w różnych klientach email
-3. Używaj inline CSS
-4. Sprawdź encoding (UTF-8)
+Każdy komunikator ma swoje zasady formatowania. To jak różne języki - wszędzie mówisz "cześć", ale inaczej to brzmi.
 
-**Problem: Dane nie wyświetlają się**
-1. Sprawdź czy expression jest poprawny
-2. Console.log w Code node
-3. Użyj node Edit Fields do podglądu
+### Slack - własny Markdown
 
-**Problem: Formatowanie znika**
-1. Slack/Discord - używaj ich składni Markdown
-2. Email - inline CSS zamiast external
-3. Sprawdź czy dane nie są escapowane
+Slack ma swoją składnię:
+
+**Pogrubienie:**
+`*tekst*` wyświetli się jako **tekst**
+
+**Kursywa:**
+`_tekst_` wyświetli się jako _tekst_
+
+**Link:**
+`<https://example.com|Kliknij tutaj>` - link z własnym tekstem
+
+**Emoji:**
+`:smile:` zamieni się na 😊
+`:fire:` zamieni się na 🔥
+
+Slack nie obsługuje pełnego HTML, więc używasz tych prostych znaczników.
+
+### Discord - klasyczny Markdown
+
+Discord używa standardowego Markdown (tego samego co np. GitHub):
+
+**Pogrubienie:**
+`**tekst**` → **tekst**
+
+**Kursywa:**
+`*tekst*` → _tekst_
+
+**Link:**
+`[Kliknij tutaj](https://example.com)`
+
+### Telegram - HTML Light
+
+Telegram akceptuje podstawowe tagi HTML:
+
+`<b>pogrubienie</b>` → **pogrubienie**
+`<i>kursywa</i>` → _kursywa_
+`<a href="link">tekst</a>` → link z tekstem
+
+Nie możesz tutaj wstawiać skomplikowanych tabel czy stylizacji, ale podstawy działają.
+
+### Messenger/WhatsApp - tylko tekst
+
+WhatsApp i Facebook Messenger **nie obsługują** żadnego formatowania. Wysyłasz zwykły tekst z emoji. Kropka.
+
+---
+
+## Różnice w wyglądzie formatów
+
+### Tabele - dlaczego są trudne?
+
+W Excelu czy Google Sheets tworzenie tabeli to sekunda. W emailu HTML to już sztuka.
+
+**W arkuszu:**
+Klikasz, wpisujesz, gotowe. Wszystko się ładnie układa.
+
+**W emailu HTML:**
+Musisz zdefiniować każdą komórkę, nadać jej szerokość, kolor, obramowanie. Jeden błąd i tabela się rozjeżdża w Outlooku.
+
+**W Slacku:**
+Nie ma tabel. Możesz użyć "code block" (potrójny backtick ` ``` `), żeby tekst wyglądał tabelarycznie, ale to nie prawdziwa tabela.
+
+**Rozwiązanie:**
+W n8n możesz użyć node Code, żeby automatycznie wygenerować tabelę HTML z Twoich danych. Nie musisz tego robić ręcznie.
+
+### Listy i wypunktowania
+
+**Email HTML:** Możesz mieć kolorowe punktorki, numerowanie, zagnieżdżone listy
+**Slack/Discord:** Zwykłe gwiazdki lub myślniki na początku linii
+**Telegram:** Tylko tekst z emoji jako "punktorki"
+
+### Obrazki
+
+**Email HTML:** Możesz wstawiać obrazki, logo, banery. Pamiętaj tylko, że muszą być hostowane online (link do obrazka), nie załączone.
+
+**Slack/Discord:** Obrazki wstawiają się automatycznie po podaniu linku.
+
+**Telegram:** Obrazki i pliki osobno od tekstu (nie możesz wpleść obrazka w środek tekstu jak w emailu).
+
+---
+
+## Praktyczny przykład: newsletter
+
+Wyobraź sobie, że codziennie wysyłasz newsletter z 3 nowymi artykułami z bloga.
+
+### Co musisz zrobić?
+
+**1. Pobrać artykuły** (HTTP Request do API bloga)
+
+**2. Przefiltrować** (tylko dzisiejsze artykuły)
+
+**3. Przekształcić dane:**
+- Tytuł każdego artykułu
+- Krótki opis
+- Link do pełnej wersji
+
+**4. Sformatować do email HTML:**
+- Nagłówek: "Dziś w naszym blogu"
+- Dla każdego artykułu: ładna ramka z tytułem, opisem i przyciskiem "Czytaj więcej"
+- Stopka: informacje o firmie, link do wypisania się
+
+**5. Wysłać** (Gmail/SendGrid/Mailchimp)
+
+W n8n możesz to wszystko zautomatyzować - raz ustawisz, a potem działa samo każdego dnia.
+
+---
+
+## Zachowanie struktury danych
+
+Często przesyłasz dane z jednego systemu do drugiego. Ważne, żeby zachować ich strukturę.
+
+**Przykład:**
+Pobierasz zamówienie z WooCommerce i chcesz je zapisać w Google Sheets.
+
+WooCommerce daje Ci:
+- Numer zamówienia
+- Imię i nazwisko klienta
+- Lista produktów (może być 1 produkt lub 10)
+- Cena całkowita
+- Data zamówienia
+
+Google Sheets oczekuje jednego wiersza z danymi. Ale co z tą listą produktów?
+
+**Rozwiązanie 1:** Zapisz produkty jako tekst rozdzielony przecinkami
+**Rozwiązanie 2:** Użyj node Split i stwórz osobny wiersz dla każdego produktu
+**Rozwiązanie 3:** Zapisz tylko nazwę pierwszego produktu + liczbę wszystkich
+
+Wybór zależy od tego, jak chcesz później analizować dane.
+
+---
+
+## Dobre praktyki
+
+### Dla email:
+
+**Zawsze testuj** - wyślij sobie testowego maila i sprawdź na telefonie i komputerze
+
+**Dodaj plain text** - nie każdy ma włączony HTML
+
+**Nie przesadzaj z kolorami** - zbyt kolorowy email wygląda jak spam
+
+**Dodaj link do wypisania się** - to wymóg prawny w większości krajów
+
+**Logo i obrazki muszą być online** - nie załączaj ich, tylko podaj link
+
+### Dla komunikatorów:
+
+**Krótko i zwięźle** - nikt nie chce czytać romansu na Slacku
+
+**Używaj emoji** - pomagają w czytelności i dodają emocji
+
+**Testuj formatowanie** - przed wysłaniem sprawdź czy działa
+
+**Nie używaj HTML w Slacku** - nie zadziała
+
+### Ogólne:
+
+**Myśl o odbiorcy** - czy to dla niego czytelne?
+
+**Pilnuj danych osobowych** - nie wysyłaj wszystkich danych wszędzie
+
+**Loguj błędy** - jeśli coś nie działa, chcesz wiedzieć co i kiedy
+
+---
+
+## Najczęstsze problemy
+
+**Email wygląda źle w Outlooku**
+To częsty problem. Outlook używa starej wersji silnika HTML (Word!). Rozwiązanie: używaj prostych struktur i inline CSS.
+
+**Dane nie wyświetlają się**
+Sprawdź czy nazwa pola jest poprawna. W n8n wielkość liter ma znaczenie: `email` to nie to samo co `Email`.
+
+**Formatowanie znika**
+Slack i Discord mają własne zasady. Nie użyjesz tam pełnego HTML. Musisz ich składni Markdown.
+
+**Tabela się rozjeżdża**
+Zawsze definiuj szerokość kolumn w procentach lub pikselach. Nie pozwalaj przeglądarce zgadywać.
+
+**Emoji nie działają**
+W Slacku: `:emoji_name:`
+W innych: używaj prawdziwych emoji 😊 (kopiuj-wklej)
+
+---
+
+## Podsumowanie
+
+Formatowanie danych to nie tylko technikalia - to sposób na to, żeby Twoja automatyzacja była **przyjazna dla ludzi**.
+
+Nikt nie chce czytać surowych danych z API. Ludzie chcą ładnych, czytelnych wiadomości.
+
+n8n daje Ci narzędzia:
+- **Set** do prostych zmian
+- **IF** do rozdzielania
+- **Merge/Split** do łączenia i dzielenia
+- **Code** do zaawansowanych przekształceń (gdy je potrzebujesz)
+
+Pamiętaj: email to HTML, komunikatory mają swoje zasady, a dane muszą być odpowiednio przygotowane. Testuj, sprawdzaj i poprawiaj.
