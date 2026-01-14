@@ -10,18 +10,18 @@ Ta lekcja to Twój przewodnik po **20 najpopularniejszych node'ach**, które wyk
 
 Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
-**🎯 Triggery** - uruchamiają workflow
-**📊 Przetwarzanie danych** - zmieniają, filtrują, sortują
-**🔄 Logika** - podejmują decyzje
-**📤 Wysyłka** - email, komunikatory, API
-**💾 Przechowywanie** - bazy danych, pliki, arkusze
-**🤖 AI i zaawansowane** - sztuczna inteligencja, przetwarzanie
+** Triggery** - uruchamiają workflow
+** Przetwarzanie danych** - zmieniają, filtrują, sortują
+** Logika** - podejmują decyzje
+** Wysyłka** - email, komunikatory, API
+** Przechowywanie** - bazy danych, pliki, arkusze
+** AI i zaawansowane** - sztuczna inteligencja, przetwarzanie
 
 ---
 
-## 🎯 Triggery - jak uruchomić workflow
+##  Triggery - jak uruchomić workflow
 
-### 1. Schedule Trigger ⏰
+### 1. Schedule Trigger 
 
 **Co robi:** Uruchamia workflow w określonym czasie.
 
@@ -40,7 +40,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-### 2. Webhook 🔗
+### 2. Webhook 
 
 **Co robi:** Czeka na połączenie z zewnątrz (otrzymanie danych).
 
@@ -59,7 +59,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-### 3. Email Trigger (IMAP) 📧
+### 3. Email Trigger (IMAP) 
 
 **Co robi:** Uruchamia się gdy otrzymasz nowego emaila.
 
@@ -77,7 +77,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-### 4. Manual Trigger 👆
+### 4. Manual Trigger 
 
 **Co robi:** Uruchamiasz workflow ręcznie przyciskiem.
 
@@ -95,9 +95,9 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-## 📊 Przetwarzanie danych
+##  Przetwarzanie danych
 
-### 5. Set (Edit Fields) ✏️
+### 5. Set (Edit Fields) 
 
 **Co robi:** Zmienia, dodaje lub usuwa pola w danych.
 
@@ -117,7 +117,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-### 6. Code (JavaScript/Python) 💻
+### 6. Code (JavaScript/Python) 
 
 **Co robi:** Pozwala pisać własny kod do przetwarzania danych.
 
@@ -136,7 +136,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-### 7. Merge 🔀
+### 7. Merge 
 
 **Co robi:** Łączy dane z dwóch różnych źródeł.
 
@@ -154,7 +154,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-### 8. Split Out 📑
+### 8. Split Out 
 
 **Co robi:** Dzieli jeden rekord na wiele (array → pojedyncze elementy).
 
@@ -171,9 +171,9 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-## 🔄 Logika i kontrola
+##  Logika i kontrola
 
-### 9. IF 🚦
+### 9. IF 
 
 **Co robi:** Rozdziela dane na 2 ścieżki (true/false) na podstawie warunku.
 
@@ -191,7 +191,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-### 10. Switch 🎚️
+### 10. Switch 
 
 **Co robi:** Rozdziela dane na wiele ścieżek w zależności od wartości.
 
@@ -208,7 +208,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-### 11. Filter 🔍
+### 11. Filter 
 
 **Co robi:** Przepuszcza tylko dane spełniające warunek (reszta znika).
 
@@ -226,7 +226,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-### 12. Loop Over Items 🔁
+### 12. Loop Over Items 
 
 **Co robi:** Wykonuje część workflow dla każdego elementu osobno.
 
@@ -244,9 +244,9 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-## 📤 Komunikacja i integracje
+##  Komunikacja i integracje
 
-### 13. HTTP Request 🌐
+### 13. HTTP Request 
 
 **Co robi:** Wysyła zapytanie do API (pobiera lub wysyła dane).
 
@@ -264,7 +264,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-### 14. Gmail 📬
+### 14. Gmail 
 
 **Co robi:** Wysyła emaile przez Gmail.
 
@@ -283,7 +283,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-### 15. Slack 💬
+### 15. Slack 
 
 **Co robi:** Wysyła wiadomości na Slacka.
 
@@ -302,7 +302,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-### 16. Telegram 🤖
+### 16. Telegram 
 
 **Co robi:** Wysyła wiadomości na Telegram (boty, kanały).
 
@@ -320,9 +320,9 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-## 💾 Przechowywanie danych
+##  Przechowywanie danych
 
-### 17. Google Sheets 📊
+### 17. Google Sheets 
 
 **Co robi:** Odczytuje i zapisuje dane w arkuszach Google.
 
@@ -341,7 +341,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-### 18. Google Drive 📁
+### 18. Google Drive 
 
 **Co robi:** Zapisuje, pobiera i zarządza plikami na Drive.
 
@@ -359,7 +359,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-### 19. MySQL / PostgreSQL / MongoDB 🗄️
+### 19. MySQL / PostgreSQL / MongoDB 
 
 **Co robi:** Łączy się z bazą danych i wykonuje zapytania.
 
@@ -377,9 +377,9 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ---
 
-## 🤖 AI i zaawansowane
+##  AI i zaawansowane
 
-### 20. OpenAI / Google Gemini 🧠
+### 20. OpenAI / Google Gemini 
 
 **Co robi:** Integracja z modelami AI (ChatGPT, Gemini).
 
@@ -402,34 +402,34 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 ## Dodatkowe popularne node'y
 
-### 21. Wait ⏸️
+### 21. Wait 
 Czeka określony czas przed dalszym wykonaniem (np. odczekaj 5 minut).
 
-### 22. RSS Feed Reader 📰
+### 22. RSS Feed Reader 
 Pobiera nowe artykuły z RSS/Atom feed.
 
-### 23. HTML Extract 🕷️
+### 23. HTML Extract 
 Wyciąga dane ze stron HTML (web scraping).
 
-### 24. Discord 🎮
+### 24. Discord 
 Wysyła wiadomości na Discorda.
 
-### 25. Airtable 🗂️
+### 25. Airtable 
 Praca z bazami Airtable (jak Sheets + DB).
 
-### 26. Notion 📝
+### 26. Notion 
 Integracja z Notion - tworzenie i edycja stron.
 
-### 27. SSH 🖥️
+### 27. SSH 
 Wykonuje komendy na serwerach przez SSH.
 
-### 28. FTP 📂
+### 28. FTP 
 Upload/download plików przez FTP/SFTP.
 
-### 29. Execute Workflow 🔄
+### 29. Execute Workflow 
 Uruchamia inny workflow z tego workflow.
 
-### 30. Item Lists 📋
+### 30. Item Lists 
 Operacje na listach (sortowanie, filtrowanie, limit).
 
 ---
