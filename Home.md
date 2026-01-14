@@ -26,28 +26,28 @@
 - [[Modul 3 - Budujemy pierwsza automatyzacje/Przesłanie pobranych danych do wskazanego miejsca (np. komunikator firmowy)]]
 
 ### Moduł 4 - Integracje z usługami
-- [[Modul 4 - Integracje z uslugami/1. Webhook]]
-- [[Modul 4 - Integracje z uslugami/2. Warsztat GCP]]
-- [[Modul 4 - Integracje z uslugami/2.1 GCP Tworzenie porjektu]]
+- [[Modul 4 - Integracje z uslugami/Webhook]]
+- [[Modul 4 - Integracje z uslugami/Warsztat GCP]]
+- [[Modul 4 - Integracje z uslugami/GCP Tworzenie projektu]]
 
 ### Moduł 5 - Implementacja agenta AI
-- [[Modul 5 - Implementacja agenta AI/1. Czym jest agent AI w kontekście automatyzacji]]
-- [[Modul 5 - Implementacja agenta AI/2. Rola modelu językowego]]
-- [[Modul 5 - Implementacja agenta AI/3. Rola promptu w agencie AI]]
-- [[Modul 5 - Implementacja agenta AI/3.1 Jak napisać skuteczny prompt]]
-- [[Modul 5 - Implementacja agenta AI/4. Połączenie API i tokeny]]
+- [[Modul 5 - Implementacja agenta AI/Czym jest agent AI w kontekście automatyzacji]]
+- [[Modul 5 - Implementacja agenta AI/Rola modelu językowego]]
+- [[Modul 5 - Implementacja agenta AI/Rola promptu w agencie AI]]
+- [[Modul 5 - Implementacja agenta AI/Jak napisać skuteczny prompt]]
+- [[Modul 5 - Implementacja agenta AI/Połączenie API i tokeny]]
 
 ### Moduł 6 - Warsztaty praktyczne
-- [[Modul 6 - Warsztaty praktyczne/1. ChatBot]]
-- [[Modul 6 - Warsztaty praktyczne/2. Pogoda]]
-- [[Modul 6 - Warsztaty praktyczne/3. Google Sheet]]
-- [[Modul 6 - Warsztaty praktyczne/4. Telegram]]
-- [[Modul 6 - Warsztaty praktyczne/5. Gemini]]
-- [[Modul 6 - Warsztaty praktyczne/6. SSH]]
-- [[Modul 6 - Warsztaty praktyczne/7. Analiza obrazu]]
-- [[Modul 6 - Warsztaty praktyczne/8. Manager kalendarza]]
-- [[Modul 6 - Warsztaty praktyczne/9. PDF converter]]
-- [[Modul 6 - Warsztaty praktyczne/10. Gmail]]
+- [[Modul 6 - Warsztaty praktyczne/ChatBot]]
+- [[Modul 6 - Warsztaty praktyczne/Pogoda]]
+- [[Modul 6 - Warsztaty praktyczne/Google Sheet]]
+- [[Modul 6 - Warsztaty praktyczne/Telegram]]
+- [[Modul 6 - Warsztaty praktyczne/Gemini]]
+- [[Modul 6 - Warsztaty praktyczne/SSH]]
+- [[Modul 6 - Warsztaty praktyczne/Analiza obrazu]]
+- [[Modul 6 - Warsztaty praktyczne/Manager kalendarza]]
+- [[Modul 6 - Warsztaty praktyczne/PDF converter]]
+- [[Modul 6 - Warsztaty praktyczne/Gmail]]
 
 ---
 
