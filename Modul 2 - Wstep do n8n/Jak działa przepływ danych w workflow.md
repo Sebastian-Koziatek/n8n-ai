@@ -61,23 +61,18 @@ Po triggerze dane trafiają do **node'ów**. Każdy node to jedno zadanie:
 
 ---
 
-## Format danych - JSON
+## Format danych - jak n8n rozumie informacje
 
-Dane w n8n przechodzą w formacie **JSON** - to taki uniwersalny język danych.
+Dane w n8n przechodzą w formacie **JSON** - to taki uniwersalny język, który komputery rozumieją.
 
-### Jak wygląda JSON?
+**Nie musisz znać JSON** - wystarczy że wiesz, że dane mają **pola** (jak kolumny w tabeli):
+- Pole "imię" przechowuje imię
+- Pole "email" przechowuje adres email
+- Pole "wiek" przechowuje wiek
 
-```json
-{
-  "imie": "Anna",
-  "email": "anna@example.com",
-  "wiek": 28
-}
-```
+**Item** to jeden element - jedna osoba, jedno zamówienie, jeden artykuł.
 
-To jest jeden **item** (element danych). Node może przetwarzać:
-- Jeden item (jedna osoba)
-- Wiele items (lista osób)
+**Wiele items** to lista elementów - 10 osób, 50 zamówień, 100 artykułów.
 
 ---
 
@@ -85,80 +80,60 @@ To jest jeden **item** (element danych). Node może przetwarzać:
 
 ### Przykład: Formularz kontaktowy
 
-**Workflow:**
-1. **Webhook** - odbiera dane z formularza
-2. **Set** - czyści i formatuje dane
+Wyobraź sobie prosty workflow:
+
+**Etapy:**
+1. **Webhook** - odbiera dane z formularza na stronie
+2. **Set** - czyści i porządkuje dane
 3. **IF** - sprawdza czy pilne
 4. **Gmail** - wysyła email
 
-**Co się dzieje z danymi:**
+**Co się dzieje:**
 
-**Krok 1: Webhook otrzymuje:**
-```json
-{
-  "name": "Jan Kowalski",
-  "email": "JAN@EXAMPLE.COM",
-  "message": "Pilne zapytanie!",
-  "urgent": "yes"
-}
-```
+**Krok 1: Formularz wysyła**
+- Imię: Jan Kowalski
+- Email: JAN@EXAMPLE.COM (wielkimi literami)
+- Wiadomość: "Pilne zapytanie!"
+- Czy pilne: tak
 
-**Krok 2: Set czyści dane:**
-- Zmienia email na małe litery
-- Łączy imię i nazwisko
-```json
-{
-  "fullName": "Jan Kowalski",
-  "email": "jan@example.com",
-  "message": "Pilne zapytanie!",
-  "isUrgent": true
-}
-```
+**Krok 2: Set porządkuje**
+- Zmienia email na małe litery: jan@example.com
+- Łączy imię i nazwisko w jedno pole
+- Zamienia "tak" na wartość logiczną prawda/fałsz
 
-**Krok 3: IF sprawdza:**
-- Czy `isUrgent` = true?
-- TAK → idzie ścieżką TRUE
-- NIE → idzie ścieżką FALSE
+**Krok 3: IF decyduje**
+- Sprawdza: czy to pilne?
+- Jeśli TAK - wysyła ścieżką dla pilnych zgłoszeń
+- Jeśli NIE - wysyła ścieżką dla normalnych
 
-**Krok 4: Gmail wysyła:**
-- Używa danych z poprzednich kroków
-- Wstawia `fullName` i `email` do treści maila
+**Krok 4: Gmail wysyła**
+- Bierze pola z poprzednich kroków
+- Wstawia je do szablonu emaila
+- Wysyła do odpowiedniej osoby
+
+Widzisz? Żadnego programowania - każdy node robi swoją prostą część.
 
 ---
 
-## Expressions - odwoływanie się do danych
+## Odwoływanie się do danych z poprzednich kroków
 
-W każdym node możesz użyć danych z poprzednich kroków używając **expressions** (wyrażeń).
+W każdym node możesz użyć danych, które przyszły z poprzedniego node'a.
 
-### Podstawowa składnia
+**Używasz podwójnych nawiasów klamrowych:**
 
-**Podwójne nawiasy klamrowe:**
-```
-{{ $json.nazwa_pola }}
-```
+Jeśli poprzedni node ma pole "imię", możesz je użyć tak:
+`Witaj {{ imię }}!`
 
-### Przykłady
+W emailu to będzie wyglądać: "Witaj Jan!"
 
-**Odczytaj imię:**
-```
-{{ $json.name }}
-```
+**Możesz łączyć pola:**
+`{{ imię }} {{ nazwisko }}` da: "Jan Kowalski"
 
-**Odczytaj email:**
-```
-{{ $json.email }}
-```
-
-**Połącz dwa pola:**
-```
-Witaj {{ $json.firstName }} {{ $json.lastName }}!
-```
-
-**Zagnieżdżone dane:**
-```
-{{ $json.address.city }}
-{{ $json.user.profile.age }}
-```
+**To działa wszędzie:**
+- W treści emaila
+- W nazwie pliku
+- W wiadomości na Slacku
+- W zapisach do bazy
 
 ---
 
@@ -172,22 +147,9 @@ Trigger zwraca 3 osoby:
 
 **Item 1:**
 ```json
-{ "name": "Anna", "email": "anna@example.com" }
-```
-
-**Item 2:**
-```json
-{ "name": "Jan", "email": "jan@example.com" }
-```
-
-**Item 3:**
-```json
-{ "name": "Ola", "email": "ola@example.com" }
-```
-
 **Co się dzieje dalej?**
 
-Domyślnie **każdy następny node przetwarza wszystkie items naraz**.
+Domyślnie **każdy następny node przetwarza wszystkie pozycje naraz**.
 
 **Ale możesz:**
 - **Filter** - wybrać tylko niektóre (np. tylko Anna)
@@ -337,10 +299,10 @@ HTTP Request (pobierz 100 produktów)
 - "Tu pobieramy dane", "Tu sprawdzamy status"
 - Pomoże Ci (i innym) zrozumieć co się dzieje
 
-**5. Loguj ważne momenty**
-- Przed długą operacją - zapisz dane do loga
-- Po ważnej decyzji - zanotuj którą ścieżką poszło
-- Ułatwi debugowanie
+**5. Zapisuj ważne momenty**
+- Przed długą operacją - zanotuj gdzie jesteś
+- Po ważnej decyzji - zapisz którą ścieżką poszło
+- Ułatwi znalezienie problemów później
 
 ---
 
@@ -351,10 +313,9 @@ HTTP Request (pobierz 100 produktów)
 - Kliknij na poprzedni node → zobacz OUTPUT
 - Może zwrócił pustą listę?
 
-**Problem: "Expression nie działa"**
+**Problem: "Wyrażenie nie działa"**
 - Sprawdź czy nazwa pola jest poprawna
-- `{{ $json.email }}` nie `{{ $json.Email }}`
-- Wielkość liter ma znaczenie!
+- Wielkość liter ma znaczenie (email to nie Email)
 
 **Problem: "Workflow się nie uruchamia"**
 - Czy jest ACTIVE?
@@ -374,9 +335,9 @@ HTTP Request (pobierz 100 produktów)
 1. **Trigger** uruchamia workflow
 2. **Dane płyną** od lewej do prawej
 3. **Każdy node** przetwarza dane i przekazuje dalej
-4. **Expressions** pozwalają odwoływać się do danych
+4. **Wyrażenia** pozwalają odwoływać się do danych z poprzednich kroków
 5. **Rozgałęzienia** kierują dane różnymi ścieżkami
-6. **Wszystko widoczne** w output panel
+6. **Wszystko widoczne** w panelu podglądu danych
 
 **Zapamiętaj:**
 - Dane zawsze idą do przodu (od lewej do prawej)

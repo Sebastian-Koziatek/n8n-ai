@@ -1,5 +1,11 @@
 # Tryby działania workflow - Active i Inactive
 
+<div align="center">
+<img src="https://obrazy.sadmin.pl/active_inactive.png" width="75%">
+</div>
+
+---
+
 Każdy workflow w n8n może być w dwóch stanach: **aktywny** (active) lub **nieaktywny** (inactive). To jak włącznik światła - albo działa, albo nie.
 
 ---
