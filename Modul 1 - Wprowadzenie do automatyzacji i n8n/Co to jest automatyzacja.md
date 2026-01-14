@@ -1,4 +1,4 @@
-![Schemat automatyzacji](https://obrazy.sadmin.pl/m1_p1-automatyzacja-schemat.png)
+![Schemat automatyzacji](/grafiki/m1_p1-automatyzacja-schemat.png)
 
 # Co to jest automatyzacja?
 
