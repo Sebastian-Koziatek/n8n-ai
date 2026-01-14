@@ -57,7 +57,7 @@ To para kluczy, które identyfikują Twoją aplikację w systemie OAuth2.
 1. Przejdź do [Google Cloud Console](https://console.cloud.google.com)
 2. Utwórz nowy projekt (lub wybierz istniejący)
 3. Włącz API (Google Sheets API, Gmail API, Drive API)
-4. Przejdź do "Credentials" → "Create Credentials" → "OAuth 2.0 Client ID"
+4. Przejdź do "Credentials"  "Create Credentials"  "OAuth 2.0 Client ID"
 5. Wybierz typ: "Web application"
 6. Dodaj Redirect URI: `https://twoja-domena-n8n.com/rest/oauth2-credential/callback`
 7. Skopiuj Client ID i Client Secret
@@ -69,7 +69,7 @@ To para kluczy, które identyfikują Twoją aplikację w systemie OAuth2.
 **Krok po kroku:**
 
 1. **W n8n dodaj credentials:**
-   - Przejdź do Settings → Credentials
+   - Przejdź do Settings  Credentials
    - Kliknij "Add Credential"
    - Wybierz "Google OAuth2 API"
 
@@ -116,7 +116,7 @@ Google Cloud oferuje setki API do różnych usług. Aby z nich korzystać:
 
 ## 6. Odczyt danych z arkusza (Get Rows)
 
-**Node: Google Sheets → Get Rows**
+**Node: Google Sheets  Get Rows**
 
 **Przykład:**
 Masz arkusz z listą klientów i chcesz pobrać wszystkie dane.
@@ -145,7 +145,7 @@ Masz arkusz z listą klientów i chcesz pobrać wszystkie dane.
 
 ## 7. Dodanie nowego wiersza (Append Row)
 
-**Node: Google Sheets → Append Row**
+**Node: Google Sheets  Append Row**
 
 **Przykład:**
 Zapisujesz nowe zgłoszenie z formularza do arkusza.
@@ -178,7 +178,7 @@ Wiersz zostanie dodany na końcu arkusza.
 
 ### **Gmail - odczyt wiadomości**
 
-**Node: Gmail → Get Messages**
+**Node: Gmail  Get Messages**
 
 1. Wybierz credentials
 2. Ustaw filtry (np. tylko nieprzeczytane, od konkretnego nadawcy)
@@ -189,7 +189,7 @@ Lista wiadomości e-mail z treścią, załącznikami, nadawcą itd.
 
 ### **Google Drive - lista plików**
 
-**Node: Google Drive → List**
+**Node: Google Drive  List**
 
 1. Wybierz credentials
 2. Opcjonalnie: ustaw folder

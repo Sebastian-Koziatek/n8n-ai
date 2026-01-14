@@ -9,9 +9,9 @@ To jak rozjazd na drodze - w zależności od warunków, dane idą w różne stro
 ## Po co bramki logiczne?
 
 Wyobraź sobie workflow, który odbiera zgłoszenia z formularza kontaktowego. Chcesz:
-- **Pilne zgłoszenia** → natychmiast wysłać SMS do szefa
-- **Standardowe** → dodać do kolejki, email do zespołu
-- **Spam** → zignorować
+- **Pilne zgłoszenia**  natychmiast wysłać SMS do szefa
+- **Standardowe**  dodać do kolejki, email do zespołu
+- **Spam**  zignorować
 
 Bez bramek logicznych musiałbyś mieć 3 osobne workflow. Z bramkami - jeden workflow, który sam decyduje co zrobić.
 
@@ -69,7 +69,7 @@ W n8n:
 
 ### Przykład 3: Godziny pracy
 
-**Scenariusz:** Zgłoszenia w godzinach pracy → natychmiastowa obsługa. Po godzinach → kolejka na jutro.
+**Scenariusz:** Zgłoszenia w godzinach pracy  natychmiastowa obsługa. Po godzinach  kolejka na jutro.
 
 **Konfiguracja IF:**
 - Warunek: `{{ $now.hour() }}` >= 8 AND `{{ $now.hour() }}` < 17
@@ -143,7 +143,7 @@ Sprawdzaj pole: `{{ $json.orderStatus }}`
 - Zaproponuj następny zakup
 
 **Ścieżka domyślna (fallback):**
-- Cokolwiek innego → loguj błąd
+- Cokolwiek innego  loguj błąd
 
 ---
 
@@ -215,8 +215,8 @@ Sprawdzaj pole: `{{ $json.country }}`
 | Przykład | Wiek >= 18 | Status: new/processing/shipped |
 
 **Prościej:**
-- IF = "Czy jest X?" → Tak lub Nie
-- Switch = "Jaki jest X?" → A, B, C, D lub coś innego
+- IF = "Czy jest X?"  Tak lub Nie
+- Switch = "Jaki jest X?"  A, B, C, D lub coś innego
 
 ---
 
@@ -229,14 +229,14 @@ Możesz łączyć IF i Switch, tworząc bardziej skomplikowane drzewa decyzyjne.
 ```
 1. IF: Czy klient jest Premium?
    
-   TRUE → Switch: Jaki priorytet zgłoszenia?
-           - Critical → Natychmiastowa obsługa
-           - High → Priorytet w kolejce
-           - Normal → Standardowa kolejka
+   TRUE  Switch: Jaki priorytet zgłoszenia?
+           - Critical  Natychmiastowa obsługa
+           - High  Priorytet w kolejce
+           - Normal  Standardowa kolejka
    
-   FALSE → IF: Czy wartość zamówień > 1000 zł?
-            TRUE → Średni priorytet
-            FALSE → Niska kolejka
+   FALSE  IF: Czy wartość zamówień > 1000 zł?
+            TRUE  Średni priorytet
+            FALSE  Niska kolejka
 ```
 
 ---
@@ -263,8 +263,8 @@ Możesz łączyć IF i Switch, tworząc bardziej skomplikowane drzewa decyzyjne.
 **Z IF:**
 - Masz 100 zamówień
 - IF: zamówienia > 500 zł?
-- TRUE: 20 zamówień → wysłij do managera
-- FALSE: 80 zamówień → standardowa obsługa
+- TRUE: 20 zamówień  wysłij do managera
+- FALSE: 80 zamówień  standardowa obsługa
 - **Wszystkie 100 jest obsłużonych**, tylko różnie
 
 ---
@@ -303,9 +303,9 @@ Nawet jeśli FALSE nic nie robi, dodaj tam node Sticky Note z komentarzem "Ignor
 
 **2. Używaj czytelnych nazw**
 Nazwij node IF opisowo:
-- ❌ "IF"
-- ✅ "IF: Sprawdź czy Premium"
-- ✅ "IF: Filtruj według wartości"
+-  "IF"
+-  "IF: Sprawdź czy Premium"
+-  "IF: Filtruj według wartości"
 
 **3. Testuj brzegowe przypadki**
 - Co jeśli wartość jest dokładnie 500? (nie >500, nie <500)
@@ -316,7 +316,7 @@ Nazwij node IF opisowo:
 "Default" ścieżka dla przypadków, których nie przewidziałeś.
 
 **5. Nie rób za głębokich zagnieżdżeń**
-IF → IF → IF → IF = trudny do czytania
+IF  IF  IF  IF = trudny do czytania
 Lepiej użyć Switch lub podzielić na mniejsze workflow.
 
 ---
@@ -362,21 +362,21 @@ Wynik: Błąd
 **1. Webhook** - otrzymaj dane o zamówieniu
 
 **2. IF: Czy klient jest nowy?**
-- TRUE → Wyślij email powitalny + kod rabatowy
-- FALSE → Kontynuuj
+- TRUE  Wyślij email powitalny + kod rabatowy
+- FALSE  Kontynuuj
 
 **3. Switch: Wartość zamówienia**
-- < 100 zł → Email standardowy
-- 100-500 zł → Email + SMS
-- > 500 zł → Email + SMS + telefon od managera
+- < 100 zł  Email standardowy
+- 100-500 zł  Email + SMS
+- > 500 zł  Email + SMS + telefon od managera
 
 **4. IF: Czy jest w magazynie?**
-- TRUE → Rozpocznij pakowanie
-- FALSE → Email "Towar w drodze, wyślemy za 2 dni"
+- TRUE  Rozpocznij pakowanie
+- FALSE  Email "Towar w drodze, wyślemy za 2 dni"
 
 **5. IF: Czy dostawa express?**
-- TRUE → Powiadomienie do kuriera priorytetowego
-- FALSE → Standardowy kurier
+- TRUE  Powiadomienie do kuriera priorytetowego
+- FALSE  Standardowy kurier
 
 Jeden workflow, wiele ścieżek - wszystko zależy od danych!
 
@@ -395,8 +395,8 @@ Jeden workflow, wiele ścieżek - wszystko zależy od danych!
 - Lepszy gdy masz wiele opcji
 
 **Kiedy używać:**
-- IF: "Czy klient jest Premium?" → Tak/Nie
-- Switch: "Jaki jest status?" → New/Processing/Shipped/Delivered
+- IF: "Czy klient jest Premium?"  Tak/Nie
+- Switch: "Jaki jest status?"  New/Processing/Shipped/Delivered
 
 **Zasada:**
 Bramki logiczne sprawiają, że Twoje workflow są **inteligentne** - reagują na różne sytuacje zamiast robić zawsze to samo.

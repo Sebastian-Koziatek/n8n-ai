@@ -113,10 +113,10 @@ Zapytanie:
 
 **GPT-5** to najinteligentniejszy model OpenAI, specjalnie wytrenowany do:
 
-✅ **Generowania kodu, debugowania i refaktoryzacji**  
-✅ **Ścisłego podążania za instrukcjami**  
-✅ **Długiego kontekstu i wywoływania narzędzi (tool calling)**  
-✅ **Zadań agentowych (agentic tasks)**
+ **Generowania kodu, debugowania i refaktoryzacji**  
+ **Ścisłego podążania za instrukcjami**  
+ **Długiego kontekstu i wywoływania narzędzi (tool calling)**  
+ **Zadań agentowych (agentic tasks)**
 
 **Tokeny w GPT-5:**
 - **Limit kontekstu: 128,000 tokenów** (identycznie jak GPT-4o/GPT-4-turbo)

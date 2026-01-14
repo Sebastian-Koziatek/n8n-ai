@@ -67,33 +67,33 @@ W n8n webhook pełni kluczową rolę jako **trigger** – punkt startowy workflo
 ### **1. Formularze kontaktowe**
 Gdy ktoś wypełni formularz na stronie:
 ```
-Formularz → Webhook → n8n → Google Sheets + Email + Slack
+Formularz  Webhook  n8n  Google Sheets + Email + Slack
 ```
 
 ### **2. Systemy zgłoszeń**
 Nowe zgłoszenie od klienta:
 ```
-System → Webhook → n8n → CRM + Powiadomienie + Ticket
+System  Webhook  n8n  CRM + Powiadomienie + Ticket
 ```
 
 ### **3. Powiadomienia z innych aplikacji**
 GitHub, Stripe, Shopify, WordPress – setki usług obsługuje webhooki:
 ```
-GitHub (nowy commit) → Webhook → n8n → Slack (powiadomienie zespołu)
+GitHub (nowy commit)  Webhook  n8n  Slack (powiadomienie zespołu)
 ```
 
 ### **4. Integracja między systemami**
 Połączenie dwóch aplikacji, które same nie potrafią się komunikować:
 ```
-System A → Webhook → n8n → System B
+System A  Webhook  n8n  System B
 ```
 
 ### **5. Automatyzacja procesów biznesowych**
 ```
-E-commerce (nowe zamówienie) → Webhook → n8n → 
-  → Aktualizacja magazynu
-  → Wysyłka faktury
-  → Powiadomienie do zespołu
+E-commerce (nowe zamówienie)  Webhook  n8n  
+   Aktualizacja magazynu
+   Wysyłka faktury
+   Powiadomienie do zespołu
 ```
 
 ---

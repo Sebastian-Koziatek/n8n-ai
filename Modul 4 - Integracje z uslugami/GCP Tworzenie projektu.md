@@ -124,7 +124,7 @@ Bez utworzenia aplikacji OAuth 2.0:
 
 W następnych krokach:
 1. Przejdziesz do sekcji **"Credentials"** w Google Cloud Console
-2. Wybierzesz **"Create Credentials"** → **"OAuth 2.0 Client ID"**
+2. Wybierzesz **"Create Credentials"**  **"OAuth 2.0 Client ID"**
 3. Określisz typ aplikacji (najczęściej **"Web application"**)
 4. Dodasz Redirect URI (adres callback z n8n)
 5. Skopiujesz Client ID i Client Secret do n8n
@@ -193,7 +193,7 @@ Dane logowania (credentials) w Google Cloud Platform to zestaw informacji, któr
 
 **Jak je uzyskać?**
 1. Po utworzeniu aplikacji w GCP przejdź do sekcji "Credentials".
-2. Wybierz "Create Credentials" → "OAuth 2.0 Client ID".
+2. Wybierz "Create Credentials"  "OAuth 2.0 Client ID".
 3. Skopiuj wygenerowany Client ID i Client Secret.
 4. Wprowadź je w konfiguracji node'a n8n (np. Google Sheets, Gmail).
 
@@ -334,7 +334,7 @@ Aby zintegrować n8n z najpopularniejszymi usługami Google, musisz aktywować n
 **Jak to zrobić?**
 1. Przejdź do konsoli Google Cloud Platform.
 2. Wybierz swój projekt.
-3. Wejdź w sekcję "APIs & Services" → "Library".
+3. Wejdź w sekcję "APIs & Services"  "Library".
 4. Wyszukaj powyższe usługi i kliknij "Enable" (Włącz).
 
 **Dlaczego to ważne?**

@@ -36,7 +36,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Raport sprzedaży w piątki
 - Monitoring stron co 15 minut
 
-**Łatwość:** ⭐⭐⭐⭐⭐ (bardzo łatwy)
+**Łatwość:**  (bardzo łatwy)
 
 ---
 
@@ -55,7 +55,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Stripe powiadamia o płatności
 - Zapier/Make wysyła dane do n8n
 
-**Łatwość:** ⭐⭐⭐⭐ (łatwy po zrozumieniu URL)
+**Łatwość:**  (łatwy po zrozumieniu URL)
 
 ---
 
@@ -69,11 +69,11 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Reakcja na powiadomienia
 
 **Przykłady:**
-- Email od klienta → stwórz ticket
-- Faktura w emailu → zapisz do Dropbox
-- Newsletter od konkurencji → analizuj
+- Email od klienta  stwórz ticket
+- Faktura w emailu  zapisz do Dropbox
+- Newsletter od konkurencji  analizuj
 
-**Łatwość:** ⭐⭐⭐ (wymaga konfiguracji IMAP)
+**Łatwość:**  (wymaga konfiguracji IMAP)
 
 ---
 
@@ -91,7 +91,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Wygeneruj raport teraz
 - Wyślij testowego emaila
 
-**Łatwość:** ⭐⭐⭐⭐⭐ (najłatwiejszy)
+**Łatwość:**  (najłatwiejszy)
 
 ---
 
@@ -113,7 +113,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Dodaj obecną datę do danych
 - Przeformatuj cenę
 
-**Łatwość:** ⭐⭐⭐⭐ (intuicyjny)
+**Łatwość:**  (intuicyjny)
 
 ---
 
@@ -132,7 +132,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Formatuj dane do specyficznego JSON
 - Pętla przez produkty i sumowanie
 
-**Łatwość:** ⭐⭐ (wymaga znajomości programowania)
+**Łatwość:**  (wymaga znajomości programowania)
 
 ---
 
@@ -150,24 +150,24 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Dane z API + dane z arkusza
 - Połącz po email lub ID
 
-**Łatwość:** ⭐⭐⭐ (trzeba zrozumieć klucze)
+**Łatwość:**  (trzeba zrozumieć klucze)
 
 ---
 
 ### 8. Split Out 
 
-**Co robi:** Dzieli jeden rekord na wiele (array → pojedyncze elementy).
+**Co robi:** Dzieli jeden rekord na wiele (array  pojedyncze elementy).
 
 **Kiedy używać:**
 - Masz listę i chcesz przetworzyć każdy element osobno
 - API zwraca 10 produktów, chcesz wysłać 10 osobnych emaili
 
 **Przykłady:**
-- Lista 5 użytkowników → 5 osobnych node'ów
-- Array produktów → każdy produkt osobno
+- Lista 5 użytkowników  5 osobnych node'ów
+- Array produktów  każdy produkt osobno
 - Rozpakuj zagnieżdżone dane
 
-**Łatwość:** ⭐⭐⭐⭐ (prosty)
+**Łatwość:**  (prosty)
 
 ---
 
@@ -183,11 +183,11 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Różne akcje dla różnych danych
 
 **Przykłady:**
-- Zamówienie > 500 zł → manager | < 500 zł → auto-accept
-- Email zawiera @firma.com → lista B2B | inny → B2C
-- Godziny pracy → obsłuż teraz | po godzinach → jutro
+- Zamówienie > 500 zł  manager | < 500 zł  auto-accept
+- Email zawiera @firma.com  lista B2B | inny  B2C
+- Godziny pracy  obsłuż teraz | po godzinach  jutro
 
-**Łatwość:** ⭐⭐⭐⭐ (logiczny)
+**Łatwość:**  (logiczny)
 
 ---
 
@@ -201,10 +201,10 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
 **Przykłady:**
 - Status zamówienia: new/processing/shipped/delivered
-- Kraj: PL/DE/UK/FR → różne zespoły
+- Kraj: PL/DE/UK/FR  różne zespoły
 - Priorytet: low/medium/high/critical
 
-**Łatwość:** ⭐⭐⭐ (prostszy niż wiele IF)
+**Łatwość:**  (prostszy niż wiele IF)
 
 ---
 
@@ -222,7 +222,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Tylko zamówienia z ostatnich 7 dni
 - Tylko emaile zawierające "urgent"
 
-**Łatwość:** ⭐⭐⭐⭐ (prosty)
+**Łatwość:**  (prosty)
 
 ---
 
@@ -240,7 +240,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - API pozwala na 1 request/sekundę
 - Przetwarzaj po kolei, nie wszystko naraz
 
-**Łatwość:** ⭐⭐ (może być zagmatwany)
+**Łatwość:**  (może być zagmatwany)
 
 ---
 
@@ -260,7 +260,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Wyślij dane do własnego API
 - Sprawdź status strony (HTTP GET)
 
-**Łatwość:** ⭐⭐⭐ (wymaga podstawowej znajomości API)
+**Łatwość:**  (wymaga podstawowej znajomości API)
 
 ---
 
@@ -279,7 +279,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Raport codzienny do zespołu
 - Alert o błędzie
 
-**Łatwość:** ⭐⭐⭐⭐ (łatwy po połączeniu konta)
+**Łatwość:**  (łatwy po połączeniu konta)
 
 ---
 
@@ -294,11 +294,11 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Monitoring
 
 **Przykłady:**
-- Nowe zamówienie → powiadomienie na #sales
-- Błąd w workflow → @mention dev team
-- Codzienne podsumowanie → #general
+- Nowe zamówienie  powiadomienie na #sales
+- Błąd w workflow  @mention dev team
+- Codzienne podsumowanie  #general
 
-**Łatwość:** ⭐⭐⭐⭐ (łatwy)
+**Łatwość:**  (łatwy)
 
 ---
 
@@ -316,7 +316,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Alerty na telefon
 - Powiadomienia o zamówieniach
 
-**Łatwość:** ⭐⭐⭐ (wymaga stworzenia bota)
+**Łatwość:**  (wymaga stworzenia bota)
 
 ---
 
@@ -337,7 +337,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Loguj każde wykonanie workflow
 - Dashboard w Sheets
 
-**Łatwość:** ⭐⭐⭐⭐ (bardzo popularny, łatwy)
+**Łatwość:**  (bardzo popularny, łatwy)
 
 ---
 
@@ -355,7 +355,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Pobierz plik z Drive do przetworzenia
 - Archiwizuj faktury
 
-**Łatwość:** ⭐⭐⭐⭐ (intuicyjny)
+**Łatwość:**  (intuicyjny)
 
 ---
 
@@ -373,7 +373,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Zapisz zamówienie do DB
 - Update statusu
 
-**Łatwość:** ⭐⭐ (wymaga znajomości SQL)
+**Łatwość:**  (wymaga znajomości SQL)
 
 ---
 
@@ -396,7 +396,7 @@ Node'y możemy podzielić na kilka kategorii według tego, co robią:
 - Generowanie opisów produktów
 - Analiza sentymentu opinii
 
-**Łatwość:** ⭐⭐⭐ (łatwy interfejs, ale wymaga API key)
+**Łatwość:**  (łatwy interfejs, ale wymaga API key)
 
 ---
 
@@ -439,22 +439,22 @@ Operacje na listach (sortowanie, filtrowanie, limit).
 **Zadaj sobie pytania:**
 
 **1. Co chcę osiągnąć?**
-- Wysłać email? → Gmail / Send Email
-- Zapisać dane? → Google Sheets / DB
-- Pobrać dane? → HTTP Request / API
-- Przetwarzać tekst AI? → OpenAI
+- Wysłać email?  Gmail / Send Email
+- Zapisać dane?  Google Sheets / DB
+- Pobrać dane?  HTTP Request / API
+- Przetwarzać tekst AI?  OpenAI
 
 **2. Skąd pochodzą dane?**
-- Z formularza? → Webhook
-- Z emaila? → Email Trigger
-- Z API? → HTTP Request
-- Regularnie? → Schedule
+- Z formularza?  Webhook
+- Z emaila?  Email Trigger
+- Z API?  HTTP Request
+- Regularnie?  Schedule
 
 **3. Co mam zrobić z danymi?**
-- Zmienić format? → Set
-- Filtrować? → Filter / IF
-- Połączyć? → Merge
-- Rozdzielić? → Split
+- Zmienić format?  Set
+- Filtrować?  Filter / IF
+- Połączyć?  Merge
+- Rozdzielić?  Split
 
 ---
 
@@ -462,27 +462,27 @@ Operacje na listach (sortowanie, filtrowanie, limit).
 
 ### Przykład 1: Codzienne raporty
 ```
-Schedule → HTTP Request → Set → Google Sheets → Gmail
+Schedule  HTTP Request  Set  Google Sheets  Gmail
 ```
-Co 24h → Pobierz dane → Formatuj → Zapisz → Wyślij email
+Co 24h  Pobierz dane  Formatuj  Zapisz  Wyślij email
 
 ### Przykład 2: Formularz kontaktowy
 ```
-Webhook → IF → Slack + Gmail
+Webhook  IF  Slack + Gmail
 ```
-Otrzymaj dane → Sprawdź czy urgent → Powiadomienia
+Otrzymaj dane  Sprawdź czy urgent  Powiadomienia
 
 ### Przykład 3: AI Chatbot
 ```
-Telegram Trigger → OpenAI → Telegram
+Telegram Trigger  OpenAI  Telegram
 ```
-Wiadomość od użytkownika → AI odpowiada → Wyślij odpowiedź
+Wiadomość od użytkownika  AI odpowiada  Wyślij odpowiedź
 
 ### Przykład 4: E-commerce automation
 ```
-Webhook (Stripe) → Google Sheets → Switch → Gmail / Slack
+Webhook (Stripe)  Google Sheets  Switch  Gmail / Slack
 ```
-Płatność → Zapisz → Sprawdź wartość → Odpowiednie powiadomienia
+Płatność  Zapisz  Sprawdź wartość  Odpowiednie powiadomienia
 
 ---
 
@@ -492,18 +492,18 @@ Płatność → Zapisz → Sprawdź wartość → Odpowiednie powiadomienia
 
 1. Kliknij "+" żeby dodać node
 2. W wyszukiwarce wpisz co chcesz:
-   - "email" → pokaże Gmail, Outlook, Send Email
-   - "database" → MySQL, PostgreSQL, MongoDB
-   - "sheets" → Google Sheets, Excel
-   - "ai" → OpenAI, Gemini, AI Agent
+   - "email"  pokaże Gmail, Outlook, Send Email
+   - "database"  MySQL, PostgreSQL, MongoDB
+   - "sheets"  Google Sheets, Excel
+   - "ai"  OpenAI, Gemini, AI Agent
 
 3. Możesz też szukać po firmie:
-   - "google" → wszystkie integracje Google
-   - "microsoft" → Teams, Outlook, OneDrive
-   - "slack" → wszystko związane ze Slackiem
+   - "google"  wszystkie integracje Google
+   - "microsoft"  Teams, Outlook, OneDrive
+   - "slack"  wszystko związane ze Slackiem
 
 **Dokumentacja:**
-docs.n8n.io → pełna lista wszystkich node'ów z przykładami
+docs.n8n.io  pełna lista wszystkich node'ów z przykładami
 
 ---
 

@@ -144,7 +144,7 @@ Gdy workflow jest aktywny i uruchamia się automatycznie, n8n zapisuje każde wy
 - **Błędy** - co poszło nie tak (jeśli był problem)
 
 **Gdzie to znaleźć:**
-Menu główne → **Executions** → lista wszystkich uruchomień
+Menu główne  **Executions**  lista wszystkich uruchomień
 
 **Po co to?**
 - Sprawdzisz czy workflow działa regularnie
@@ -157,8 +157,8 @@ Menu główne → **Executions** → lista wszystkich uruchomień
 ## Active workflow - dobre praktyki
 
 **1. Nazywaj workflow sensownie**
-- ❌ "Workflow 1", "Test", "Nowy"
-- ✅ "Codzienne raporty sprzedaży", "Webhook Stripe - nowe płatności"
+-  "Workflow 1", "Test", "Nowy"
+-  "Codzienne raporty sprzedaży", "Webhook Stripe - nowe płatności"
 
 **2. Dodaj opis**
 - W ustawieniach workflow możesz dodać notes
@@ -191,7 +191,7 @@ Menu główne → **Executions** → lista wszystkich uruchomień
 3. Format danych
 4. Slack - wyślij wiadomość
 
-**Stan:** **ACTIVE** ✅
+**Stan:** **ACTIVE** 
 **Dlaczego?** Ma działać automatycznie każdego dnia.
 
 ---
@@ -204,7 +204,7 @@ Menu główne → **Executions** → lista wszystkich uruchomień
 3. Przetworz dane
 4. Zapisz do Google Sheets
 
-**Stan:** **INACTIVE** ⭕
+**Stan:** **INACTIVE** 
 **Dlaczego?** Używasz go tylko gdy masz nowy plik CSV. Uruchamiasz ręcznie.
 
 ---
@@ -217,7 +217,7 @@ Menu główne → **Executions** → lista wszystkich uruchomień
 3. Zapisz do bazy
 4. Wyślij email potwierdzający
 
-**Stan:** **ACTIVE** ✅
+**Stan:** **ACTIVE** 
 **Dlaczego?** Musi być dostępny 24/7 żeby przyjmować formularze ze strony.
 
 ---
@@ -230,7 +230,7 @@ Menu główne → **Executions** → lista wszystkich uruchomień
 3. Wygeneruj HTML email
 4. Wyślij do subskrybentów
 
-**Stan:** **ACTIVE** ✅
+**Stan:** **ACTIVE** 
 **Dlaczego?** Ma działać automatycznie w piątki.
 
 ---
@@ -240,18 +240,18 @@ Menu główne → **Executions** → lista wszystkich uruchomień
 ### Problem: "Workflow nie uruchamia się automatycznie"
 
 **Sprawdź:**
-- ✅ Czy workflow jest ACTIVE?
-- ✅ Czy trigger jest poprawnie skonfigurowany?
-- ✅ Czy czas w Schedule jest poprawny (strefa czasowa)?
-- ✅ Czy n8n działa (serwer uruchomiony)?
+-  Czy workflow jest ACTIVE?
+-  Czy trigger jest poprawnie skonfigurowany?
+-  Czy czas w Schedule jest poprawny (strefa czasowa)?
+-  Czy n8n działa (serwer uruchomiony)?
 
 ### Problem: "Webhook nie działa"
 
 **Sprawdź:**
-- ✅ Czy workflow jest ACTIVE?
-- ✅ Czy URL webhooka jest poprawny?
-- ✅ Czy webhook jest typu Production (nie Test)?
-- ✅ Czy wysyłasz dane we właściwym formacie?
+-  Czy workflow jest ACTIVE?
+-  Czy URL webhooka jest poprawny?
+-  Czy webhook jest typu Production (nie Test)?
+-  Czy wysyłasz dane we właściwym formacie?
 
 ### Problem: "Workflow wykonuje się, ale są błędy"
 
@@ -275,24 +275,24 @@ Po prostu ustaw na INACTIVE. Możesz go później ponownie aktywować.
 - Edytujesz node'y
 - Zmieniasz logikę
 - Testujesz nowe funkcje
-→ Wyłącz na czas zmian, włącz po testach
+ Wyłącz na czas zmian, włącz po testach
 
 **2. Workflow już nie jest potrzebny**
 - Kampania się skończyła
 - Projekt zamknięty
 - Dane już nie są aktualne
-→ Wyłącz lub usuń
+ Wyłącz lub usuń
 
 **3. Jest problem, którego nie możesz szybko naprawić**
 - Zewnętrzne API nie działa
 - Brakuje Ci informacji
 - Czekasz na wsparcie
-→ Wyłącz czasowo
+ Wyłącz czasowo
 
 **4. Wakacje/urlop**
 - Jeśli workflow wymaga Twojej interwencji w razie problemów
 - A nie ma kto go obsłużyć
-→ Rozważ wyłączenie
+ Rozważ wyłączenie
 
 ---
 

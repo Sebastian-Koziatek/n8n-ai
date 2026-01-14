@@ -249,11 +249,11 @@ Agent automatycznie przetwarza faktury, wyciąga dane, rejestruje w systemie, sp
 
 ## **Zalety używania agentów AI w automatyzacji**
 
-✅ **Inteligentne decyzje** – agent potrafi analizować kontekst i reagować elastycznie  
-✅ **Rozumienie języka naturalnego** – możesz komunikować się z agentem jak z człowiekiem  
-✅ **Wielozadaniowość** – agent może wykonywać złożone, wieloetapowe procesy  
-✅ **Skalowalność** – jeden agent może obsługiwać setki zadań równocześnie  
-✅ **Oszczędność czasu** – automatyzacja zadań, które wcześniej wymagały ręcznej pracy  
+ **Inteligentne decyzje** – agent potrafi analizować kontekst i reagować elastycznie  
+ **Rozumienie języka naturalnego** – możesz komunikować się z agentem jak z człowiekiem  
+ **Wielozadaniowość** – agent może wykonywać złożone, wieloetapowe procesy  
+ **Skalowalność** – jeden agent może obsługiwać setki zadań równocześnie  
+ **Oszczędność czasu** – automatyzacja zadań, które wcześniej wymagały ręcznej pracy  
 
 ---
 

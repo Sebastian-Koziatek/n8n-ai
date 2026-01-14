@@ -112,7 +112,7 @@ W polu "Message" wybierz tryb JSON i wpisz:
 ### **Przykład 3: Wysyłanie do Microsoft Teams**
 
 **Krok 1: Uzyskaj Webhook URL**
-- W Teams przejdź do kanału → Connectors → Incoming Webhook
+- W Teams przejdź do kanału  Connectors  Incoming Webhook
 - Skopiuj URL
 
 **Krok 2: Dodaj node HTTP Request**

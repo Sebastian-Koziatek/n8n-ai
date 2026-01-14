@@ -78,9 +78,9 @@ Załóżmy workflow, który:
 Przepływ nie musi być liniowy. Możesz użyć node'a **IF** do rozgałęzienia:
 
 ```
-Webhook → IF (sprawdź status)
-           ├─ Jeśli "pilne" → Slack + Email
-           └─ Jeśli "normalne" → Google Sheets
+Webhook  IF (sprawdź status)
+           ├─ Jeśli "pilne"  Slack + Email
+           └─ Jeśli "normalne"  Google Sheets
 ```
 
 ---

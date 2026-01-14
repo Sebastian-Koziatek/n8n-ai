@@ -41,8 +41,8 @@ Masz dane z formularza: `firstName`, `lastName`, ale w emailu chcesz użyć `ful
 **Node IF** działa jak rozjazd na drodze - dane mogą pójść w dwie różne strony w zależności od warunków.
 
 **Praktyczny przykład:**
-- Jeśli klient zamówił za więcej niż 500 zł → wyślij mu voucher rabatowy
-- Jeśli zamówił za mniej → wyślij standardowe podziękowanie
+- Jeśli klient zamówił za więcej niż 500 zł  wyślij mu voucher rabatowy
+- Jeśli zamówił za mniej  wyślij standardowe podziękowanie
 
 To samo narzędzie możesz użyć do filtrowania - np. wysyłaj powiadomienia tylko o zamówieniach ze statusem "opłacone".
 
@@ -157,8 +157,8 @@ Slack ma swoją składnię:
 `<https://example.com|Kliknij tutaj>` - link z własnym tekstem
 
 **Emoji:**
-`:smile:` zamieni się na 😊
-`:fire:` zamieni się na 🔥
+`:smile:` zamieni się na 
+`:fire:` zamieni się na 
 
 Slack nie obsługuje pełnego HTML, więc używasz tych prostych znaczników.
 
@@ -167,10 +167,10 @@ Slack nie obsługuje pełnego HTML, więc używasz tych prostych znaczników.
 Discord używa standardowego Markdown (tego samego co np. GitHub):
 
 **Pogrubienie:**
-`**tekst**` → **tekst**
+`**tekst**`  **tekst**
 
 **Kursywa:**
-`*tekst*` → _tekst_
+`*tekst*`  _tekst_
 
 **Link:**
 `[Kliknij tutaj](https://example.com)`
@@ -179,9 +179,9 @@ Discord używa standardowego Markdown (tego samego co np. GitHub):
 
 Telegram akceptuje podstawowe tagi HTML:
 
-`<b>pogrubienie</b>` → **pogrubienie**
-`<i>kursywa</i>` → _kursywa_
-`<a href="link">tekst</a>` → link z tekstem
+`<b>pogrubienie</b>`  **pogrubienie**
+`<i>kursywa</i>`  _kursywa_
+`<a href="link">tekst</a>`  link z tekstem
 
 Nie możesz tutaj wstawiać skomplikowanych tabel czy stylizacji, ale podstawy działają.
 
@@ -325,7 +325,7 @@ Zawsze definiuj szerokość kolumn w procentach lub pikselach. Nie pozwalaj prze
 
 **Emoji nie działają**
 W Slacku: `:emoji_name:`
-W innych: używaj prawdziwych emoji 😊 (kopiuj-wklej)
+W innych: używaj prawdziwych emoji  (kopiuj-wklej)
 
 ---
 

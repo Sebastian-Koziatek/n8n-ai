@@ -115,7 +115,7 @@ Wiele API wymaga klucza API w nagłówku (header):
 
 **Krok 1: Dodaj Header**
 W node HTTP Request:
-- Kliknij "Add Option" → "Headers"
+- Kliknij "Add Option"  "Headers"
 - Dodaj parametr:
   - **Name:** `Authorization`
   - **Value:** `Bearer YOUR_API_KEY`
@@ -175,9 +175,9 @@ Dane z API zwracane są w formacie JSON. W n8n możesz do nich odwołać się u�
 ```
 
 **Wyrażenia w n8n:**
-- `{{ $json.name }}` → "John Doe"
-- `{{ $json.email }}` → "john@example.com"
-- `{{ $json.address.city }}` → "Warsaw"
+- `{{ $json.name }}`  "John Doe"
+- `{{ $json.email }}`  "john@example.com"
+- `{{ $json.address.city }}`  "Warsaw"
 
 **Dla tablic (array):**
 ```json
@@ -187,8 +187,8 @@ Dane z API zwracane są w formacie JSON. W n8n możesz do nich odwołać się u�
 ]
 ```
 
-- `{{ $json[0].name }}` → "John"
-- `{{ $json[1].name }}` → "Jane"
+- `{{ $json[0].name }}`  "John"
+- `{{ $json[1].name }}`  "Jane"
 
 ---
 
@@ -241,7 +241,7 @@ Selektory CSS wskazują, które elementy na stronie chcesz wyciągnąć:
 ### Przykład 2: Scraping linków
 
 **CSS Selector:** `a[href]`
-**Return Value:** Attribute → `href`
+**Return Value:** Attribute  `href`
 
 Wyciąga wszystkie adresy URL z linków na stronie.
 
@@ -269,7 +269,7 @@ Załóżmy, że sklep ma produkty w HTML:
 ### Przykład 4: Scraping obrazków
 
 **CSS Selector:** `img.product-image`
-**Return Value:** Attribute → `src`
+**Return Value:** Attribute  `src`
 
 Wyciąga URLe obrazków.
 
