@@ -1,3 +1,7 @@
+<div align="center">
+<img src="/grafiki/m3_p4-pobranie-danych-zewnetrznych.png" alt="Pobieranie danych z zewnętrznego serwisu" width="75%">
+</div>
+
 # Pobieranie danych z internetu w n8n
 
 Jednym z najważniejszych zastosowań n8n jest pobieranie i przetwarzanie danych z różnych źródeł internetowych. W tej lekcji nauczysz się, jak używać HTTP Request do komunikacji z API oraz jak wydobywać dane ze stron HTML.
@@ -271,6 +275,116 @@ Wyciąga URLe obrazków.
 
 ---
 
+## Inne sposoby pobierania danych w n8n
+
+### Dedykowane node'y integracyjne
+
+Oprócz HTTP Request, n8n oferuje gotowe node'y do najpopularniejszych serwisów:
+
+**Aplikacje produktywności:**
+- Google Sheets, Gmail, Drive, Calendar
+- Microsoft Office 365, OneDrive, Outlook
+- Notion, Airtable, Trello
+
+**Komunikatory:**
+- Slack, Discord, Microsoft Teams
+- Telegram, WhatsApp
+
+**Bazy danych:**
+- MySQL, PostgreSQL, MongoDB
+- Redis, SQLite
+
+**CRM i Marketing:**
+- HubSpot, Salesforce, Pipedrive
+- Mailchimp, SendGrid
+
+**E-commerce:**
+- Shopify, WooCommerce
+- Stripe, PayPal
+
+Node'y te mają uproszczoną konfigurację i automatycznie obsługują autoryzację oraz formatowanie danych. Zwykle wystarczy:
+1. Dodać node (np. "Google Sheets")
+2. Skonfigurować credentials (OAuth2)
+3. Wybrać operację (Read, Write, Update)
+4. Wybrać konkretny zasób (arkusz, plik itp.)
+
+### Webhook - odbieranie danych od zewnętrznych serwisów
+
+Webhook to odwrotność HTTP Request - zamiast pobierać dane, **odbierasz** je od zewnętrznego serwisu.
+
+**Jak to działa:**
+1. W n8n dodajesz node **Webhook**
+2. n8n generuje unikalny URL (endpoint)
+3. Konfigurujesz zewnętrzny serwis, aby wysyłał dane na ten URL
+4. Gdy zewnętrzny serwis wyśle dane, workflow uruchamia się automatycznie
+
+**Przykłady zastosowania:**
+- Formularz na stronie wysyła zgłoszenie
+- System płatności wysyła potwierdzenie transakcji
+- GitHub wysyła powiadomienie o nowym commit
+- CRM wysyła informację o nowym lead'zie
+
+**Praktyka: Webhook w n8n**
+
+1. Dodaj node **Webhook**
+2. Metoda: POST
+3. Skopiuj wygenerowany URL
+4. W zewnętrznym systemie skonfiguruj webhook z tym URL
+5. Gdy dane przyjdą, workflow się uruchomi
+
+### Autoryzacja i bezpieczeństwo
+
+Wiele serwisów wymaga autoryzacji. n8n obsługuje kilka metod:
+
+**API Key**
+- Klucz w nagłówku: `X-API-Key: YOUR_KEY`
+- Lub w parametrze URL: `?api_key=YOUR_KEY`
+- Prosty i szybki
+
+**OAuth2**
+- Logowanie przez Google, Facebook, Microsoft
+- Bezpieczniejsze od API Key
+- n8n automatycznie obsługuje tokeny i odświeżanie
+
+**Basic Auth**
+- Login i hasło w nagłówku
+- Zakodowane Base64
+- Starszy standard
+
+**Bearer Token**
+- Token w nagłówku: `Authorization: Bearer TOKEN`
+- Często używany w nowoczesnych API
+
+**Ważne:** Zawsze przechowuj klucze API w n8n Credentials, nigdy nie wpisuj ich bezpośrednio w URL!
+
+---
+
+## Praktyczne workflow: kompleksowy przykład
+
+**Scenariusz:** Codziennie pobierz nowe artykuły z bloga, wyślij je na Slack i zapisz w Google Sheets
+
+**Node 1: Schedule Trigger**
+- Codziennie o 9:00
+
+**Node 2: HTTP Request**
+- Pobierz RSS feed lub użyj API bloga
+- LUB: HTTP Request (HTML) + HTML Extract
+
+**Node 3: Filter**
+- Sprawdź czy artykuły są z dzisiaj
+- Filtruj tylko nowe
+
+**Node 4: Google Sheets**
+- Append Row - dodaj tytuł, link, datę
+
+**Node 5: Slack**
+- Send Message - wyślij powiadomienie z linkiem
+
+**Node 6: IF (Error Handling)**
+- Jeśli coś poszło nie tak, wyślij alert
+
+---
+
 ## Workflow: API + HTML Extract razem
 
 **Scenariusz:** Pobierz artykuły z bloga i wyślij powiadomienie na Slacka
@@ -287,39 +401,6 @@ Wyciąga URLe obrazków.
 
 **Node 4: Slack**
 - Wyślij tytuł i link do każdego artykułu
-
----
-
-## Headers i opcje zaawansowane
-
-### Najczęściej używane Headers
-
-**Content-Type** - format danych w body:
-- `application/json` - JSON
-- `application/x-www-form-urlencoded` - form data
-- `text/html` - HTML
-
-**Accept** - jaki format chcesz otrzymać:
-- `application/json`
-- `text/html`
-
-**User-Agent** - identyfikacja "przeglądarki":
-```
-Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
-```
-
-Przydatne przy scrapingu - niektóre strony blokują requesty bez User-Agent.
-
-### Timeout
-
-Domyślnie n8n czeka 300 sekund (5 minut) na odpowiedź. Można zmienić:
-- **Timeout:** 10000 (10 sekund)
-
-### Response Format
-
-- **JSON** - automatyczne parsowanie JSON
-- **Text** - surowy tekst (do HTML Extract)
-- **File** - zapisz jako plik
 
 ---
 
@@ -349,31 +430,16 @@ Domyślnie n8n czeka 300 sekund (5 minut) na odpowiedź. Można zmienić:
 **Cache dla statycznych danych:**
 - Jeśli dane rzadko się zmieniają, cachuj je
 
----
+**Monitoring i logowanie:**
+- Sprawdzaj Execution History
+- Dodaj powiadomienia o błędach
+- Loguj ważne operacje
 
-## Przydatne publiczne API do testów
-
-**JSONPlaceholder** (fake data):
-- [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com)
-- Users, posts, comments, photos
-
-**REST Countries** (dane o krajach):
-- [https://restcountries.com](https://restcountries.com)
-
-**OpenWeatherMap** (pogoda):
-- [https://openweathermap.org/api](https://openweathermap.org/api)
-
-**CoinGecko** (kryptowaluty):
-- [https://www.coingecko.com/en/api](https://www.coingecko.com/en/api)
-
-**GitHub API** (repozytoria, issues):
-- [https://api.github.com](https://api.github.com)
-
-**News API** (wiadomości):
-- [https://newsapi.org](https://newsapi.org)
-
-**Cat Facts API** (losowe fakty o kotach):
-- [https://catfact.ninja/fact](https://catfact.ninja/fact)
+**Bezpieczeństwo:**
+- Nie udostępniaj kluczy API publicznie
+- Regularnie rotuj klucze
+- Ustaw limity wydatków w API
+- Używaj HTTPS zawsze
 
 ---
 
