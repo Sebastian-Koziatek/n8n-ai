@@ -8,14 +8,18 @@ Ta lekcja to Twój przewodnik po **20 najpopularniejszych node'ach**, które wyk
 
 ## Kategorie node'ów
 
+<div align="center">
+<img src="/grafiki/node-categories.png" alt="Kategorie node'ów" width="75%">
+</div>
+
 Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
-** Triggery** - uruchamiają workflow
-** Przetwarzanie danych** - zmieniają, filtrują, sortują
-** Logika** - podejmują decyzje
-** Wysyłka** - email, komunikatory, API
-** Przechowywanie** - bazy danych, pliki, arkusze
-** AI i zaawansowane** - sztuczna inteligencja, przetwarzanie
+**Triggery** - uruchamiają workflow
+**Przetwarzanie danych** - zmieniają, filtrują, sortują
+**Logika** - podejmują decyzje
+**Wysyłka** - email, komunikatory, API
+**Przechowywanie** - bazy danych, pliki, arkusze
+**AI i zaawansowane** - sztuczna inteligencja, przetwarzanie
 
 ---
 
