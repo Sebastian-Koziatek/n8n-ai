@@ -17,7 +17,6 @@
 - [[Modul 2 - Wstep do n8n/Interfejs n8n i logika działania]]
 - [[Modul 2 - Wstep do n8n/Jak działa przepływ (flow → node → dane → kolejny node)]]
 - [[Modul 2 - Wstep do n8n/Czym różni się trigger od akcji]]
-- [[Modul 2 - Wstep do n8n/Przegląd popularnych node'ów]]
 
 ### Moduł 3 - Budujemy pierwszą automatyzację
 - [[Modul 3 - Budujemy pierwsza automatyzacje/Utworzenie funkcji harmonogramu (Cron)]]
