@@ -24,6 +24,7 @@
 - [[Modul 3 - Budujemy pierwsza automatyzacje/Pobranie danych z zewnętrznego serwisu]]
 - [[Modul 3 - Budujemy pierwsza automatyzacje/Analiza działania i struktury danych]]
 - [[Modul 3 - Budujemy pierwsza automatyzacje/Przesłanie pobranych danych do wskazanego miejsca (np. komunikator firmowy)]]
+- [[Modul 3 - Budujemy pierwsza automatyzacje/Konfiguracja API - OpenAI i Google Gemini]]
 
 ### Moduł 4 - Integracje z usługami
 - [[Modul 4 - Integracje z uslugami/Webhook]]
