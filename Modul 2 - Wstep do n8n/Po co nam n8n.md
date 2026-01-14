@@ -1,4 +1,6 @@
-![Po co n8n](https://obrazy.sadmin.pl/m2_p4-po-co-n8n-title.png)
+<div align="center">
+<img src="/grafiki/m2_p4-po-co-n8n-title.png" alt="Po co n8n" width="50%">
+</div>
 
 W świecie pełnym różnych narzędzi do automatyzacji (Zapier, Make, Power Automate) warto zadać pytanie: dlaczego właśnie n8n? Co sprawia, że to narzędzie wyróżnia się na tle konkurencji?
 

@@ -1,4 +1,6 @@
-![Schemat automatyzacji](/grafiki/m1_p1-automatyzacja-schemat.png)
+<div align="center">
+<img src="/grafiki/m1_p1-automatyzacja-schemat.png" alt="Schemat automatyzacji" width="50%">
+</div>
 
 # Co to jest automatyzacja?
 
