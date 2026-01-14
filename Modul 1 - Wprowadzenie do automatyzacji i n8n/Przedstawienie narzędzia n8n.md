@@ -1,5 +1,5 @@
 <div align="center">
-<img src="/grafiki/m1_p4-n8n-title.png" alt="n8n – automatyzacja dla każdego" width="50%">
+<img src="/grafiki/m1_p4-n8n-title.png" alt="n8n – automatyzacja dla każdego" width="75%">
 </div>
 
 n8n to nowoczesne, otwarte narzędzie do automatyzacji procesów i integracji aplikacji, które pozwala tworzyć zaawansowane przepływy pracy bez programowania.

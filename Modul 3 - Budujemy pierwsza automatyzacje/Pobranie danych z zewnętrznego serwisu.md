@@ -1,5 +1,5 @@
 <div align="center">
-<img src="/grafiki/m3_p4-pobranie-danych-zewnetrznych.png" alt="Pobieranie danych z zewnętrznego serwisu" width="50%">
+<img src="/grafiki/m3_p4-pobranie-danych-zewnetrznych.png" alt="Pobieranie danych z zewnętrznego serwisu" width="75%">
 </div>
 
 # Pobieranie danych z zewnętrznego serwisu

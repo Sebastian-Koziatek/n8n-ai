@@ -1,6 +1,6 @@
 
 <div align="center">
-<img src="/grafiki/m1_p2_no-code-title.png" alt="Systemy no-code" width="50%">
+<img src="/grafiki/m1_p2_no-code-title.png" alt="Systemy no-code" width="75%">
 </div>
 
 Wyobraź sobie, że chcesz zautomatyzować powtarzalne zadania w pracy, ale nie znasz programowania. Systemy no-code pozwalają Ci to zrobić za pomocą prostych, wizualnych narzędzi – wystarczy przeciągnąć odpowiednie bloki i połączyć je w logiczny przepływ.

@@ -1,5 +1,5 @@
 <div align="center">
-<img src="/grafiki/m3_p5-przeslanie-danych-komunikator.png" alt="Przesłanie pobranych danych do komunikatora" width="50%">
+<img src="/grafiki/m3_p5-przeslanie-danych-komunikator.png" alt="Przesłanie pobranych danych do komunikatora" width="75%">
 </div>
 
 # Przesłanie pobranych - kanły odbiorcze
