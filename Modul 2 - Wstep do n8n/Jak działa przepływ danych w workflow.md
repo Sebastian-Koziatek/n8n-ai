@@ -1,5 +1,9 @@
 # Jak działa przepływ danych w workflow
 
+<div align="center">
+<img src="/grafiki/workflow.png" alt="Przepływ danych w workflow" width="75%">
+</div>
+
 W n8n automatyzacje buduje się jak układankę - łącząc ze sobą różne node'y. Dane przepływają przez nie jak woda przez rurę - z jednego node'a do drugiego, zmieniając się po drodze.
 
 Zrozumienie tego przepływu to klucz do tworzenia skutecznych automatyzacji.
