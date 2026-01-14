@@ -1,5 +1,9 @@
 # Bramki logiczne - IF i Switch
 
+<div align="center">
+<img src="/grafiki/bramki-logiczne.png" alt="Bramki logiczne" width="75%">
+</div>
+
 Bramki logiczne to node'y, które pozwalają Twojemu workflow podejmować decyzje. Zamiast robić zawsze to samo, workflow może reagować różnie w zależności od danych.
 
 To jak rozjazd na drodze - w zależności od warunków, dane idą w różne strony.
