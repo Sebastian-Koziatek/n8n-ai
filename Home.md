@@ -22,6 +22,7 @@
 ### Moduł 3 - Budujemy pierwszą automatyzację
 - [[Modul 3 - Budujemy pierwsza automatyzacje/Utworzenie funkcji harmonogramu (Cron)]]
 - [[Modul 3 - Budujemy pierwsza automatyzacje/Pobieranie danych z internetu - API i HTTP Request]]
+- [[Modul 3 - Budujemy pierwsza automatyzacje/Praca z danymi - transformacje i formatowanie]]
 - [[Modul 3 - Budujemy pierwsza automatyzacje/Analiza działania i struktury danych]]
 - [[Modul 3 - Budujemy pierwsza automatyzacje/Przesłanie pobranych danych do wskazanego miejsca (np. komunikator firmowy)]]
 - [[Modul 3 - Budujemy pierwsza automatyzacje/Konfiguracja API - OpenAI i Google Gemini]]
