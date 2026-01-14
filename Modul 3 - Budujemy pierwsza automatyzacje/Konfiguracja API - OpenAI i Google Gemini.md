@@ -1,5 +1,11 @@
 # Konfiguracja API - OpenAI i Google Gemini
 
+<div align="center">
+<img src="https://obrazy.sadmin.pl/api_gemini_openai.png" width="75%">
+</div>
+
+---
+
 Aby korzystać z modeli AI w n8n, potrzebujesz kluczy API (API Keys) od dostawców usług. W tej lekcji nauczysz się, jak uzyskać dostęp do OpenAI API i Google Gemini API.
 
 ---
