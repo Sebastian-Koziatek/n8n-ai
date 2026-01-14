@@ -1,5 +1,9 @@
 # Przegląd najpopularniejszych node'ów
 
+<div align="center">
+<img src="/grafiki/node-categories.png" alt="Kategorie node'ów" width="75%">
+</div>
+
 W n8n masz dostęp do setek node'ów. Na początku może to przytłaczać - od czego zacząć? 
 
 Ta lekcja to Twój przewodnik po **20 najpopularniejszych node'ach**, które wykorzystasz w 90% swoich automatyzacji.
@@ -7,10 +11,6 @@ Ta lekcja to Twój przewodnik po **20 najpopularniejszych node'ach**, które wyk
 ---
 
 ## Kategorie node'ów
-
-<div align="center">
-<img src="/grafiki/node-categories.png" alt="Kategorie node'ów" width="75%">
-</div>
 
 Node'y możemy podzielić na kilka kategorii według tego, co robią:
 
