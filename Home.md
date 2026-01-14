@@ -12,12 +12,15 @@
 - [[Modul 1 - Wprowadzenie do automatyzacji i n8n/Czym są systemy automatyzacji no-code]]
 - [[Modul 1 - Wprowadzenie do automatyzacji i n8n/Jak przeprowadzić automatyzację bez umiejętności programowania]]
 - [[Modul 1 - Wprowadzenie do automatyzacji i n8n/Przedstawienie narzędzia n8n]]
+- [[Modul 1 - Wprowadzenie do automatyzacji i n8n/Przegląd najpopularniejszych node'ów]]
 
 ### Moduł 2 - Wstęp do n8n
 - [[Modul 2 - Wstep do n8n/Po co nam n8n]]
 - [[Modul 2 - Wstep do n8n/Interfejs n8n i logika działania]]
 - [[Modul 2 - Wstep do n8n/Jak działa przepływ (flow → node → dane → kolejny node)]]
 - [[Modul 2 - Wstep do n8n/Czym różni się trigger od akcji]]
+- [[Modul 2 - Wstep do n8n/Tryby działania workflow - Active i Inactive]]
+- [[Modul 2 - Wstep do n8n/Bramki logiczne - IF i Switch]]
 
 ### Moduł 3 - Budujemy pierwszą automatyzację
 - [[Modul 3 - Budujemy pierwsza automatyzacje/Utworzenie funkcji harmonogramu (Cron)]]
