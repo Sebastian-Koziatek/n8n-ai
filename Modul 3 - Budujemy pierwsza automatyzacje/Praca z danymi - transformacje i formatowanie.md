@@ -1,5 +1,11 @@
 # Praca z danymi - transformacje i formatowanie
 
+<div align="center">
+<img src="https://obrazy.sadmin.pl/formatowanie.png" width="75%">
+</div>
+
+---
+
 W n8n dane przepływają między node'ami jak wiadomości - każdy node odbiera informacje, przetwarza je i przekazuje dalej. Często te dane trzeba przekształcić, oczyścić lub odpowiednio sformatować, zanim trafią do miejsca docelowego.
 
 W tej lekcji nauczysz się, jak przygotowywać dane tak, aby wyglądały dobrze w emailu, komunikatorze czy arkuszu kalkulacyjnym.
