@@ -67,15 +67,15 @@ Wybór odpowiedniego podejścia do automatyzacji zależy od potrzeb, budżetu i 
 - Proste do średnio złożone automatyzacje
 
 **Zalety:**
-- ✅ Zerowy próg wejścia – każdy może tworzyć automatyzacje
-- ✅ Szybkie wdrożenie (od minut do godzin)
-- ✅ Niski koszt – nie wymaga programisty
-- ✅ Łatwa konserwacja i modyfikacja
+- Zerowy próg wejścia – każdy może tworzyć automatyzacje
+- Szybkie wdrożenie (od minut do godzin)
+- Niski koszt – nie wymaga programisty
+- Łatwa konserwacja i modyfikacja
 
 **Wady:**
-- ❌ Ograniczona elastyczność
-- ❌ Zależność od możliwości platformy
-- ❌ Trudności przy bardzo złożonych scenariuszach
+- Ograniczona elastyczność
+- Zależność od możliwości platformy
+- Trudności przy bardzo złożonych scenariuszach
 
 **Przykłady:** Zapier, Power Automate, IFTTT, n8n (w trybie wizualnym)
 
@@ -93,15 +93,15 @@ Wybór odpowiedniego podejścia do automatyzacji zależy od potrzeb, budżetu i 
 - Zespoły z programistami i osobami nietechnicznymi
 
 **Zalety:**
-- ✅ Większa elastyczność niż no-code
-- ✅ Możliwość rozbudowy o własną logikę
-- ✅ Szybsze od tradycyjnego programowania
-- ✅ Łączenie prostoty z mocą kodu
+- Większa elastyczność niż no-code
+- Możliwość rozbudowy o własną logikę
+- Szybsze od tradycyjnego programowania
+- Łączenie prostoty z mocą kodu
 
 **Wady:**
-- ❌ Wymaga podstawowej wiedzy programistycznej
-- ❌ Ryzyko stworzenia trudnego do utrzymania kodu
-- ❌ Droższe od no-code (potrzeba programisty)
+- Wymaga podstawowej wiedzy programistycznej
+- Ryzyko stworzenia trudnego do utrzymania kodu
+- Droższe od no-code (potrzeba programisty)
 
 **Przykłady:** OutSystems, Mendix, Retool, n8n (z użyciem JavaScript w node'ach)
 
@@ -119,16 +119,16 @@ Wybór odpowiedniego podejścia do automatyzacji zależy od potrzeb, budżetu i 
 - Zespoły z dedykowanymi programistami
 
 **Zalety:**
-- ✅ Nieograniczona elastyczność
-- ✅ Pełna kontrola nad kodem i bezpieczeństwem
-- ✅ Możliwość optymalizacji wydajności
-- ✅ Brak zależności od platform zewnętrznych
+- Nieograniczona elastyczność
+- Pełna kontrola nad kodem i bezpieczeństwem
+- Możliwość optymalizacji wydajności
+- Brak zależności od platform zewnętrznych
 
 **Wady:**
-- ❌ Wysoki koszt (zatrudnienie/outsourcing programistów)
-- ❌ Długi czas wdrożenia (tygodnie/miesiące)
-- ❌ Wymaga ciągłej konserwacji i aktualizacji
-- ❌ Zależność od wiedzy programistów
+- Wysoki koszt (zatrudnienie/outsourcing programistów)
+- Długi czas wdrożenia (tygodnie/miesiące)
+- Wymaga ciągłej konserwacji i aktualizacji
+- Zależność od wiedzy programistów
 
 **Przykłady:** Python, Node.js, Java, C#, API custom
 
