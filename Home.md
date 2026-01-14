@@ -7,6 +7,7 @@
 ## Moduły kursu
 
 ### Moduł 1 - Wprowadzenie do automatyzacji i n8n
+- [[Modul 1 - Wprowadzenie do automatyzacji i n8n/0. n8n - Instalacja i uruchomienie]]
 - [[Modul 1 - Wprowadzenie do automatyzacji i n8n/Co to jest automatyzacja]]
 - [[Modul 1 - Wprowadzenie do automatyzacji i n8n/Czym są systemy automatyzacji no-code]]
 - [[Modul 1 - Wprowadzenie do automatyzacji i n8n/Jak przeprowadzić automatyzację bez umiejętności programowania]]
