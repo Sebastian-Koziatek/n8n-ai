@@ -12,7 +12,7 @@ Instrukcja jest oparta na realnym procesie debugowania i zawiera wyłącznie kro
 2. **Entra ID → App registrations → New registration**.
 3. **Nazwa**: np. `n8n-m365`.
 4. **Supported account types**: Konta tylko w tym katalogu organizacyjnym.
-5. **Redirect URI**: Web → `https://<twoj-n8n>/rest/oauth2-credential/callback`.
+5. **Indentyfikator URL przekieorwanie**: Internet => `https://<twoj-n8n>/rest/oauth2-credential/callback`.
 6. Zapisz.
 
 ![Rejestracja aplikacji](/grafiki/microsoft-rejestracja.png)
