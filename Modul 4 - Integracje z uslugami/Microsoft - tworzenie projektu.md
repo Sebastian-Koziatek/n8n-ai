@@ -17,7 +17,7 @@ Instrukcja jest oparta na realnym procesie debugowania i zawiera wyłącznie kro
 
 ![Rejestracja aplikacji](/grafiki/microsoft-rejestracja.png)
 
-![Rejestracja aplikacji - krok 2](/grafiki/microsoft-rejestracja-2.png)
+![Rejestracja aplikacji - krok 2](/grafiki/microsoft-rejestracja-2-nowy.png)
 
 ---
 
