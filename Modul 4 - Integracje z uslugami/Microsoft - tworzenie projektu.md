@@ -47,6 +47,8 @@ Wqf8Q~iMFIPPNqfalTLvLaie19OasOShSdxqgaat
 
 ![Client Secret](/grafiki/microsoft-client-secret.png)
 
+> 💡 **Ta wartość będzie potrzebna jako Client Secret w konfiguracji n8n.**
+
 > ⚠️ **Nigdy nie używaj „Identyfikatora wpisu tajnego"**
 
 ---
