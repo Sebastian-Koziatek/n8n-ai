@@ -37,13 +37,15 @@ W **Przeglądzie aplikacji** skopiuj:
 
 1. **Certificates & secrets → Client secrets → New client secret**
 2. Dodaj sekret
-3. **SKOPIUJ NATYCHMIAST pole „Wartość"**
+3. **Zapisz pole „Wartość"**
 
 Przykład:
 
 ```
 Wqf8Q~iMFIPPNqfalTLvLaie19OasOShSdxqgaat
 ```
+
+![Client Secret](/grafiki/microsoft-client-secret.png)
 
 > ⚠️ **Nigdy nie używaj „Identyfikatora wpisu tajnego"**
 
