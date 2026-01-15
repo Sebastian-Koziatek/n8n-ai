@@ -25,8 +25,7 @@ Instrukcja jest oparta na realnym procesie debugowania i zawiera wyłącznie kro
 
 W **Przeglądzie aplikacji** skopiuj:
 
-* **Application (client) ID** → używany jako `Client ID`
-* **Directory (tenant) ID** → używany jako `Tenant ID`
+* **Identyfikator aplikacji** → używany jako `Client ID`
 
 ![Tenant ID](/grafiki/microsoft-tenant-id.png)
 
