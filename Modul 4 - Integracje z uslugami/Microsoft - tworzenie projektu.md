@@ -1,0 +1,179 @@
+# Integracja n8n z Microsoft 365 (OAuth2 – Microsoft Graph)
+
+Poniższa instrukcja opisuje **kompletną, działającą konfigurację** integracji n8n z Microsoft 365 (Outlook / Microsoft Graph) dla **aplikacji single-tenant** w Microsoft Entra ID.
+
+Instrukcja jest oparta na realnym procesie debugowania i zawiera wyłącznie kroki wymagane do poprawnego działania.
+
+---
+
+## Wymagania wstępne
+
+* n8n self-hosted z publicznym HTTPS
+* Dostęp administracyjny do Microsoft Entra ID (Azure AD)
+* Jedna dzierżawa (single-tenant)
+
+---
+
+## Krok 1. Rejestracja aplikacji w Microsoft Entra ID
+
+1. Wejdź do **Microsoft Entra ID → Rejestracje aplikacji**
+2. Kliknij **Nowa rejestracja**
+3. Ustaw:
+
+   * **Nazwa**: `n8n`
+   * **Obsługiwane typy kont**: tylko konta w tej organizacji (single-tenant)
+   * **Identyfikator URI przekierowania**:
+
+     * Typ: `Web`
+     * URL:
+
+       ```
+       https://<twoj-n8n>/rest/oauth2-credential/callback
+       ```
+4. Zarejestruj aplikację
+
+---
+
+## Krok 2. Skopiuj identyfikatory aplikacji
+
+W **Przeglądzie aplikacji** skopiuj:
+
+* **Application (client) ID** → używany jako `Client ID`
+* **Directory (tenant) ID** → używany jako `Tenant ID`
+
+> ⚠️ **Object ID NIE jest używany w OAuth2**
+
+---
+
+## Krok 3. Utwórz Client Secret (klucz tajny klienta)
+
+1. **Certificates & secrets → Client secrets → New client secret**
+2. Dodaj sekret
+3. **SKOPIUJ NATYCHMIAST pole „Wartość"**
+
+Przykład:
+
+```
+Wqf8Q~iMFIPPNqfalTLvLaie19OasOShSdxqgaat
+```
+
+> ⚠️ **Nigdy nie używaj „Identyfikatora wpisu tajnego"**
+
+---
+
+## Krok 4. Uprawnienia API (Microsoft Graph)
+
+1. **API permissions → Add permission → Microsoft Graph**
+2. Wybierz **Delegated permissions**
+3. Dodaj minimalny zestaw:
+
+   * `User.Read`
+   * `Mail.Read`
+4. Kliknij **Grant admin consent**
+
+---
+
+## Krok 5. Konfiguracja credentiala w n8n
+
+> Używamy **OAuth2 API (Generic)**, aby wymusić tenant-specific endpoint
+
+### 5.1 Dodaj credential
+
+* **Credentials → Add credential → OAuth2 API**
+
+### 5.2 Wypełnij pola
+
+**Authorization URL**
+
+```
+https://login.microsoftonline.com/<TENANT_ID>/oauth2/v2.0/authorize
+```
+
+**Access Token URL**
+
+```
+https://login.microsoftonline.com/<TENANT_ID>/oauth2/v2.0/token
+```
+
+**Client ID**
+
+```
+<Application (client) ID>
+```
+
+**Client Secret**
+
+```
+<WARTOŚĆ sekretu>
+```
+
+**Scope**
+
+```
+openid profile email offline_access Mail.Read
+```
+
+Pozostałe pola:
+
+* Authentication: `Header`
+* Grant Type: `Authorization Code`
+
+---
+
+## Krok 6. Autoryzacja
+
+1. Kliknij **Connect my account**
+2. Zaloguj się kontem z tej samej dzierżawy
+3. Zatwierdź zgody
+
+Po poprawnym zakończeniu:
+
+* Credential w n8n ma status **Connected**
+
+---
+
+## Najczęstsze błędy i ich przyczyny
+
+### AADSTS700016 – Application not found
+
+* Client ID ≠ Application (client) ID
+* Zły Tenant ID
+
+### AADSTS50194 – common endpoint
+
+* Aplikacja single-tenant + `/common`
+* Rozwiązanie: **tenant-specific URL**
+
+### AADSTS7000215 – Invalid client secret
+
+* Wklejono **Secret ID** zamiast **Value**
+* Rozwiązanie: wygeneruj nowy secret
+
+### Insufficient parameters for OAuth2 callback
+
+* OAuth przerwany po stronie Microsoft
+* Zawsze efekt wcześniejszego błędu
+
+---
+
+## Minimalna konfiguracja produkcyjna (checklista)
+
+* [x] Aplikacja single-tenant
+* [x] Redirect URI zgodny 1:1 z n8n
+* [x] Delegated permissions
+* [x] Tenant-specific OAuth endpoint
+* [x] Client Secret = VALUE
+
+---
+
+## Uwagi produkcyjne
+
+* Zaplanuj rotację Client Secret
+* Rozważ certyfikat zamiast sekretu
+* Minimalizuj zakresy (least privilege)
+
+---
+
+## Gotowe
+
+Po wykonaniu powyższych kroków integracja n8n ↔ Microsoft 365 działa stabilnie i poprawnie.
