@@ -6,14 +6,6 @@ Instrukcja jest oparta na realnym procesie debugowania i zawiera wyłącznie kro
 
 ---
 
-## Wymagania wstępne
-
-* n8n self-hosted z publicznym HTTPS
-* Dostęp administracyjny do Microsoft Entra ID (Azure AD)
-* Jedna dzierżawa (single-tenant)
-
----
-
 ## Krok 1. Rejestracja aplikacji w Microsoft Entra ID
 
 1. Wejdź do **Microsoft Entra ID → Rejestracje aplikacji**
@@ -31,6 +23,8 @@ Instrukcja jest oparta na realnym procesie debugowania i zawiera wyłącznie kro
        https://<twoj-n8n>/rest/oauth2-credential/callback
        ```
 4. Zarejestruj aplikację
+
+![Rejestracja aplikacji](/grafiki/microsoft-rejestracja.png)
 
 ---
 
