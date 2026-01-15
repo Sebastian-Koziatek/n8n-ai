@@ -71,10 +71,16 @@ Wqf8Q~iMFIPPNqfalTLvLaie19OasOShSdxqgaat
 2. Kliknij **Add a permission** (Dodaj uprawnienie)
 3. Wybierz **Microsoft Graph**
 4. Wybierz **Delegated permissions** (Uprawnienia delegowane)
+
+![Wybór uprawnień API](/grafiki/microsoft-api-permissions-1.png)
+
 5. Dodaj wymagane uprawnienia do aplikacji:
    * `User.Read`
    * `Mail.Read`
    * `Mail.Send` (opcjonalnie, jeśli potrzebne wysyłanie wiadomości)
+
+![Dodawanie uprawnień](/grafiki/microsoft-api-permissions-2.png)
+
 6. Kliknij **Add permissions**
 7. Kliknij **Grant admin consent for [nazwa organizacji]** aby zatwierdzić uprawnienia
 
