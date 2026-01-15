@@ -6,23 +6,14 @@ Instrukcja jest oparta na realnym procesie debugowania i zawiera wyłącznie kro
 
 ---
 
-## Krok 1. Rejestracja aplikacji w Microsoft Entra ID
+## Krok 1. Zarejestruj aplikację w Microsoft Entra ID (Azure AD)
 
-1. Wejdź do **Microsoft Entra ID → Rejestracje aplikacji**
-2. Kliknij **Nowa rejestracja**
-3. Ustaw:
-
-   * **Nazwa**: `n8n`
-   * **Obsługiwane typy kont**: tylko konta w tej organizacji (single-tenant)
-   * **Identyfikator URI przekierowania**:
-
-     * Typ: `Web`
-     * URL:
-
-       ```
-       https://<twoj-n8n>/rest/oauth2-credential/callback
-       ```
-4. Zarejestruj aplikację
+1. Wejdź do portalu: https://entra.microsoft.com
+2. **Entra ID → App registrations → New registration**.
+3. **Nazwa**: np. `n8n-m365`.
+4. **Supported account types**: Accounts in this organizational directory only.
+5. **Redirect URI**: Web → `https://<twoj-n8n>/rest/oauth2-credential/callback`.
+6. Zapisz.
 
 ![Rejestracja aplikacji](/grafiki/microsoft-rejestracja.png)
 
