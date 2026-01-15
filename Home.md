@@ -34,7 +34,7 @@
 - [[Modul 4 - Integracje z uslugami/Webhook]]
 - [[Modul 4 - Integracje z uslugami/Warsztat GCP]]
 - [[Modul 4 - Integracje z uslugami/GCP Tworzenie projektu]]
-- [[Modul 4 - Integracje z uslugami/3. Microsoft - tworzenie projektu]]
+- [[Modul 4 - Integracje z uslugami/Microsoft - tworzenie projektu]]
 
 ### Moduł 5 - Implementacja agenta AI
 - [[Modul 5 - Implementacja agenta AI/Czym jest agent AI w kontekście automatyzacji]]
