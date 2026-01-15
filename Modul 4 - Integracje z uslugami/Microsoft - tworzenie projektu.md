@@ -65,15 +65,30 @@ Wqf8Q~iMFIPPNqfalTLvLaie19OasOShSdxqgaat
 
 ---
 
-## Krok 5. Konfiguracja credentiala w n8n
+## Krok 5. Nadaj uprawnienia interfejsu API
+
+1. W menu aplikacji przejdź do **API permissions** (Uprawnienia interfejsu API)
+2. Kliknij **Add a permission** (Dodaj uprawnienie)
+3. Wybierz **Microsoft Graph**
+4. Wybierz **Delegated permissions** (Uprawnienia delegowane)
+5. Dodaj wymagane uprawnienia do aplikacji:
+   * `User.Read`
+   * `Mail.Read`
+   * `Mail.Send` (opcjonalnie, jeśli potrzebne wysyłanie wiadomości)
+6. Kliknij **Add permissions**
+7. Kliknij **Grant admin consent for [nazwa organizacji]** aby zatwierdzić uprawnienia
+
+---
+
+## Krok 6. Konfiguracja credentiala w n8n
 
 > Używamy **OAuth2 API (Generic)**, aby wymusić tenant-specific endpoint
 
-### 5.1 Dodaj credential
+### 6.1 Dodaj credential
 
 * **Credentials → Add credential → OAuth2 API**
 
-### 5.2 Wypełnij pola
+### 6.2 Wypełnij pola
 
 **Authorization URL**
 
@@ -112,7 +127,7 @@ Pozostałe pola:
 
 ---
 
-## Krok 6. Autoryzacja
+## Krok 7. Autoryzacja
 
 1. Kliknij **Connect my account**
 2. Zaloguj się kontem z tej samej dzierżawy
