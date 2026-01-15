@@ -28,6 +28,8 @@ W **Przeglądzie aplikacji** skopiuj:
 * **Application (client) ID** → używany jako `Client ID`
 * **Directory (tenant) ID** → używany jako `Tenant ID`
 
+![Tenant ID](/grafiki/microsoft-tenant-id.png)
+
 > ⚠️ **Object ID NIE jest używany w OAuth2**
 
 ---
