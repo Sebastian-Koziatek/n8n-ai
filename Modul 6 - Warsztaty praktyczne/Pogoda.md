@@ -1,3 +1,5 @@
+# Pogoda
+
 ```json
 {
   "name": "2. Pogoda",
@@ -8,96 +10,86 @@
       "typeVersion": 1,
       "position": [
         0,
-        0
+        -96
       ],
-      "id": "0838547e-359d-48ad-8951-4507c026b63d",
-      "name": "When clicking ‘Execute workflow’"
+      "id": "75c952e3-2d2e-4485-89b8-c41e60d3b7f0",
+      "name": "When clicking 'Execute workflow'"
     },
     {
       "parameters": {
-        "url": "https://api.open-meteo.com/v1/forecast?latitude=50.0614&longitude=19.9366&current_weather=true",
+        "url": "https://api.open-meteo.com/v1/forecast?latitude=50.0647&longitude=19.9450&current_weather=true&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m",
         "options": {}
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
         208,
-        0
+        -96
       ],
-      "id": "a9e43bc1-0882-4a52-8c10-c30ac0e313a1",
+      "id": "a8fabf7a-71e7-43ca-9224-f7fa09d3205d",
       "name": "HTTP Request"
     },
     {
       "parameters": {
         "promptType": "define",
-        "text": "=Poniżej masz gotowy, poprawiony prompt, idealnie dostosowany do Open-Meteo i do danych, które pokazałeś.\nDziała 1:1 w n8n, nie odwołuje się do JSON, nie pyta o dane, nie wspomina o brakach – wszystko zgodnie z Twoimi zasadami.\nFormat raportu pozostaje taki sam, ale pola są mapowane na dane Open-Meteo (które mają inne nazwy niż wttr.in).\nPOPRAWIONY PROMPT (WKLEJ DO n8n “Message a model”)\nPrzygotuj krótki, czytelny raport pogodowy na podstawie dostarczonych danych.\nNigdy nie proś o dane i nie wspominaj o formatach, strukturach ani o brakach.\nJeśli jakieś pole jest niedostępne, wpisz \"brak danych\".\nZwróć odpowiedź dokładnie w poniższym formacie, wstawiając prawdziwe wartości zamiast nawiasów klamrowych:\nMiejscowość: {areaName}, {country}\nTemperatura: {temp_C}°C (odczuwalna: {FeelsLikeC}°C)\nPogoda: {weatherDesc}\nWilgotność: {humidity}%\nWiatr: {windspeedKmph} km/h\nCiśnienie: {pressure} hPa\nWidoczność: {visibility} km\nKomentarz: {krótkie jedno zdanie opisujące warunki}\nDane wejściowe:\n{{ JSON.stringify($json, null, 2) }}\nMapa danych:\nareaName  \"Kraków\"\ncountry  \"Polska\"\ntemp_C  $json.current_weather.temperature\nFeelsLikeC  brak danych\nweatherDesc  kod pogodowy z weathercode (użyj krótkiego opisu)\nhumidity  brak danych\nwindspeedKmph  $json.current_weather.windspeed\npressure  brak danych\nvisibility  brak danych",
+        "text": "=Jesteś AI Agentem w n8n\n\nDzisiaj w Krakowie jest taka pogoda:\nTemperatura: {{ $json.current_weather.temperature }}\nPrędkość wiatru: {{ $json.current_weather.windspeed }}\n\n\nNa podstawie tych danych zaproponuj mi odpowiedniu ubiór. \n\nOdpowiedz mi tylko w formacie HTML gotowym do wysłania przez gmail.",
         "options": {}
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2,
       "position": [
         384,
-        0
+        -96
       ],
-      "id": "c81354b3-c47d-4229-98b9-8ac711498da5",
+      "id": "ba4cc304-e19b-4e2e-900c-72dae6d0e564",
       "name": "AI Agent"
     },
     {
       "parameters": {
-        "model": {
-          "__rl": true,
-          "value": "gpt-5-nano",
-          "mode": "list",
-          "cachedResultName": "gpt-5-nano"
-        },
+        "sendTo": "sebastian.koziatek@sadmin.pl",
+        "subject": "Pogoda dla Krakowa",
+        "message": "={{ $json.output }}",
         "options": {}
       },
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1.2,
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
       "position": [
-        256,
-        208
+        736,
+        -96
       ],
-      "id": "9e23c4bb-516d-43d6-8784-2f19d417e052",
-      "name": "OpenAI Chat Model",
+      "id": "8af9e32a-f270-4938-ac5d-00cdef630309",
+      "name": "Send a message",
+      "webhookId": "96d288f2-d6e2-4e45-94b4-57f6b45a603d",
       "credentials": {
-        "openAiApi": {
-          "id": "QIDUdl5nMKsoFRT8",
-          "name": "OpenAi account"
+        "gmailOAuth2": {
+          "id": "0Wj0gH1mIojguqO2",
+          "name": "Gmail account"
         }
       }
     },
     {
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "value": "#n8n-1",
-          "mode": "name"
-        },
-        "text": "={{ $json.output }}\n\nSebastian",
-        "otherOptions": {}
+        "options": {}
       },
-      "type": "n8n-nodes-base.slack",
-      "typeVersion": 2.3,
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
       "position": [
-        736,
-        64
+        256,
+        112
       ],
-      "id": "c070c7fb-3683-49f5-bd26-02ed0e38c961",
-      "name": "Send a message",
-      "webhookId": "1a6c89b0-22d9-49bb-9698-2c25f5d842c8",
+      "id": "34ba392e-663e-4092-9f0e-637ac270b8f1",
+      "name": "Google Gemini Chat Model",
       "credentials": {
-        "slackApi": {
-          "id": "tPqpFoNVEcDSYAwB",
-          "name": "Slack account"
+        "googlePalmApi": {
+          "id": "4uHZO99YEmZNtmuG",
+          "name": "Google Gemini(PaLM) Api account"
         }
       }
     }
   ],
   "pinData": {},
   "connections": {
-    "When clicking ‘Execute workflow’": {
+    "When clicking 'Execute workflow'": {
       "main": [
         [
           {
@@ -130,7 +122,7 @@
         ]
       ]
     },
-    "OpenAI Chat Model": {
+    "Google Gemini Chat Model": {
       "ai_languageModel": [
         [
           {
@@ -146,12 +138,12 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "d0c19cf1-ee74-4a17-b5dc-ff7159980059",
+  "versionId": "57ede4f9-ae73-4e6e-92a0-6b2ded6cade9",
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "45cdfe5d33c15ac09fe745eed18ba8431c804bbc71dfc7e4a62ca65ad47117cb"
+    "instanceId": "1353456e2ddcdae7487c07e33159c9fe20fa539d7372a5785d975b74e64d953b"
   },
-  "id": "vEbxDfUh2o3XM785",
+  "id": "9b8TLk21634LaCWj",
   "tags": []
 }
 ```
