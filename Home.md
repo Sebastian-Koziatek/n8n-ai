@@ -44,16 +44,16 @@
 - [[Modul 5 - Implementacja agenta AI/Połączenie API i tokeny]]
 
 ### Moduł 6 - Warsztaty praktyczne
-- [[Modul 6 - Warsztaty praktyczne/ChatBot]]
-- [[Modul 6 - Warsztaty praktyczne/Pogoda]]
-- [[Modul 6 - Warsztaty praktyczne/Google Sheet]]
-- [[Modul 6 - Warsztaty praktyczne/Telegram]]
-- [[Modul 6 - Warsztaty praktyczne/Gemini]]
-- [[Modul 6 - Warsztaty praktyczne/SSH]]
-- [[Modul 6 - Warsztaty praktyczne/Analiza obrazu]]
-- [[Modul 6 - Warsztaty praktyczne/Manager kalendarza]]
-- [[Modul 6 - Warsztaty praktyczne/PDF converter]]
-- [[Modul 6 - Warsztaty praktyczne/Gmail]]
+- [[ChatBot|Modul 6 - Warsztaty praktyczne/ChatBot]]
+- [[Pogoda|Modul 6 - Warsztaty praktyczne/Pogoda]]
+- [[Google Sheet|Modul 6 - Warsztaty praktyczne/Google Sheet]]
+- [[Telegram|Modul 6 - Warsztaty praktyczne/Telegram]]
+- [[Gemini|Modul 6 - Warsztaty praktyczne/Gemini]]
+- [[SSH|Modul 6 - Warsztaty praktyczne/SSH]]
+- [[Analiza obrazu|Modul 6 - Warsztaty praktyczne/Analiza obrazu]]
+- [[Manager kalendarza|Modul 6 - Warsztaty praktyczne/Manager kalendarza]]
+- [[PDF converter|Modul 6 - Warsztaty praktyczne/PDF converter]]
+- [[Gmail|Modul 6 - Warsztaty praktyczne/Gmail]]
 
 ---
 
