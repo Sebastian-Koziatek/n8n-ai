@@ -42,7 +42,7 @@ W **Przeglądzie aplikacji** skopiuj:
 Przykład:
 
 ```
-Wqf8Q~iMFIPPNqfalTLvLaie19OasOShSdxqgaat
+Wqf8Q~XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 ![Client Secret](/grafiki/microsoft-client-secret.png)
