@@ -52,7 +52,6 @@
 - [[SSH|Modul 6 - Warsztaty praktyczne/SSH]]
 - [[Analiza obrazu|Modul 6 - Warsztaty praktyczne/Analiza obrazu]]
 - [[Manager kalendarza|Modul 6 - Warsztaty praktyczne/Manager kalendarza]]
-- [[PDF converter|Modul 6 - Warsztaty praktyczne/PDF converter]]
 - [[Gmail|Modul 6 - Warsztaty praktyczne/Gmail]]
 
 ---
