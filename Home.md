@@ -53,6 +53,9 @@
 - [[Analiza obrazu|Modul 6 - Warsztaty praktyczne/Analiza obrazu]]
 - [[Manager kalendarza|Modul 6 - Warsztaty praktyczne/Manager kalendarza]]
 - [[Gmail|Modul 6 - Warsztaty praktyczne/Gmail]]
+- [[Faktury|Modul 6 - Warsztaty praktyczne/Faktury]]
+- [[BBC RSS|Modul 6 - Warsztaty praktyczne/BBC RSS]]
+- [[Scrapper www|Modul 6 - Warsztaty praktyczne/Scrapper www]]
 
 ---
 
