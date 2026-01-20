@@ -1,6 +1,4 @@
-<div align="center">
-<img src="/grafiki/m3_p4-pobranie-danych-zewnetrznych.png" alt="Pobieranie danych z zewnętrznego serwisu" width="75%">
-</div>
+![Pobieranie danych z zewnętrznego serwisu](/grafiki/m3_p4-pobranie-danych-zewnetrznych.png)
 
 # Pobieranie danych z internetu w n8n
 

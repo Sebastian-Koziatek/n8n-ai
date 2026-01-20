@@ -1,8 +1,6 @@
 3### **Jak AI interpretuje zapytania?**
 
-<div align="center">
-<img src="/grafiki/blok1-p2-ai-interpretuje-zapytania-title.png" alt="Jak AI interpretuje zapytania" width="75%">
-</div>
+![Jak AI interpretuje zapytania](/grafiki/blok1-p2-ai-interpretuje-zapytania-title.png)
 
 - **Tokenizacja** – Model dzieli zapytanie na mniejsze jednostki językowe zwane tokenami – mogą to być słowa, części słów lub znaki interpunkcyjne. To pierwszy krok przetwarzania tekstu.
 - **Analiza wzorców językowych** – AI rozpoznaje wzorce, schematy gramatyczne i struktury zdaniowe na podstawie danych treningowych. Nie rozumie znaczenia, ale identyfikuje układy znane z przeszłych danych.

@@ -1,7 +1,5 @@
 
-<div align="center">
-<img src="/grafiki/blok1-p6-api-vs-przegladarka-title.png" alt="ChatGPT w przeglądarce vs ChatGPT API" width="75%">
-</div>
+![ChatGPT w przeglądarce vs ChatGPT API](/grafiki/blok1-p6-api-vs-przegladarka-title.png)
 
 <div align="center">
 

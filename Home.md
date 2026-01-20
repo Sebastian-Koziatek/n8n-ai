@@ -1,8 +1,6 @@
 # n8n szkolenie
 
-<div align="center">
-<img src="/grafiki/n8n-banner.jpg" alt="n8n Banner" width="50%">
-</div>
+![n8n Banner](/grafiki/n8n-banner.jpg)
 
 ## Moduły kursu
 

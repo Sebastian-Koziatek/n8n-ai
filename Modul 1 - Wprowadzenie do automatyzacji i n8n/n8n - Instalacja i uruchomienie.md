@@ -1,6 +1,4 @@
-<div align="center">
-<img src="/grafiki/n8n-logo.png" alt="n8n Logo" width="75%">
-</div>
+![n8n Logo](/grafiki/n8n-logo.png)
 
 # n8n - Instalacja i uruchomienie
 

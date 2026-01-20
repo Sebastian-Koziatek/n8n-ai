@@ -1,6 +1,4 @@
-<div align="center">
-<img src="/grafiki/m4_p1-warsztat-gcp-title.png" alt="Warsztat GCP" width="75%">
-</div>
+![Warsztat GCP](/grafiki/m4_p1-warsztat-gcp-title.png)
 
 Ten warsztat przeprowadzi Cię przez pełną integrację n8n z usługami Google Cloud Platform. Nauczysz się łączyć z Google Sheets, autoryzować przez OAuth2, pobierać i zapisywać dane oraz budować kompletny workflow z webhookiem i powiadomieniami.
 

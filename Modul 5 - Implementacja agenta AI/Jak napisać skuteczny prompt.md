@@ -1,6 +1,4 @@
-<div align="center">
-<img src="/grafiki/m5_p3-skuteczny-prompt.png" alt="Jak napisać skuteczny prompt" width="75%">
-</div>
+![Jak napisać skuteczny prompt](/grafiki/m5_p3-skuteczny-prompt.png)
 
 ## 7 elementów skutecznego promptu
 

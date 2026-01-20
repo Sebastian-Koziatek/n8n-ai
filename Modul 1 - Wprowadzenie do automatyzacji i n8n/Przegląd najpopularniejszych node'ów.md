@@ -1,8 +1,6 @@
 # Przegląd najpopularniejszych node'ów
 
-<div align="center">
-<img src="/grafiki/node-categories.png" alt="Kategorie node'ów" width="75%">
-</div>
+![Kategorie node'ów](/grafiki/node-categories.png)
 
 W n8n masz dostęp do setek node'ów. Na początku może to przytłaczać - od czego zacząć? 
 

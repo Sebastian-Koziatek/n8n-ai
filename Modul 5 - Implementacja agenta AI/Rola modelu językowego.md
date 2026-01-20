@@ -1,6 +1,4 @@
-<div align="center">
-<img src="/grafiki/m5_p2-model-jezykowy.png" alt="Rola modelu językowego w agencie AI" width="75%">
-</div>
+![Rola modelu językowego w agencie AI](/grafiki/m5_p2-model-jezykowy.png)
 
 # Rola modelu językowego w agencie AI
 

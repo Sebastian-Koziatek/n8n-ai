@@ -1,7 +1,5 @@
 
-<div align="center">
-<img src="/grafiki/m2_p2-interfejs-title.png" alt="Interfejs n8n" width="75%">
-</div>
+![Interfejs n8n](/grafiki/m2_p2-interfejs-title.png)
 
 # Interfejs n8n i logika działania
 

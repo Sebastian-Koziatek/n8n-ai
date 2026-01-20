@@ -1,6 +1,4 @@
-<div align="center">
-<img src="/grafiki/m4_p1-webhook-title.png" alt="Webhook w n8n" width="75%">
-</div>
+![Webhook w n8n](/grafiki/m4_p1-webhook-title.png)
 
 # Webhook w n8n
 

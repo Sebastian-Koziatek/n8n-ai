@@ -1,6 +1,4 @@
-<div align="center">
-<img src="/grafiki/Gemini_Generated_Image_z5sp1ez5sp1ez5sp.png" alt="Tworzenie projektu w GCP" width="75%">
-</div>
+![Tworzenie projektu w GCP](/grafiki/Gemini_Generated_Image_z5sp1ez5sp1ez5sp.png)
 
 ## Krok 1: Wejdź do Google Cloud Console
 

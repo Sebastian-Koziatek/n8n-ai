@@ -1,7 +1,5 @@
 
-<div align="center">
-<img src="/grafiki/m2_p3-flow-title.png" alt="Flow w n8n" width="75%">
-</div>
+![Flow w n8n](/grafiki/m2_p3-flow-title.png)
 
 W n8n każdy workflow to sekwencja połączonych ze sobą node'ów, przez które przepływają dane. Zrozumienie tego mechanizmu jest kluczowe dla tworzenia efektywnych automatyzacji.
 

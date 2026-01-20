@@ -1,6 +1,4 @@
-<div align="center">
-<img src="/grafiki/m5_p1-agent-ai-diagram.png" alt="Czym jest agent AI w kontekście automatyzacji" width="75%">
-</div>
+![Czym jest agent AI w kontekście automatyzacji](/grafiki/m5_p1-agent-ai-diagram.png)
 
 # Czym jest agent AI w kontekście automatyzacji?
 
