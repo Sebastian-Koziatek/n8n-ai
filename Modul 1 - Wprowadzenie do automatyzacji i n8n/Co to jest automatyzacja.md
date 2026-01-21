@@ -1,4 +1,4 @@
-![Schemat automatyzacji](/grafiki/m1_p1-automatyzacja-schemat.png)
+(/grafiki/m1_p1-automatyzacja-schemat.png)
 
 # Co to jest automatyzacja?
 

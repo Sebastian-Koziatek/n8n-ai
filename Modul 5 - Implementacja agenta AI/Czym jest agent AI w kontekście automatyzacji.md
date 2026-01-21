@@ -1,4 +1,4 @@
-![Czym jest agent AI w kontekście automatyzacji](/grafiki/m5_p1-agent-ai-diagram.png)
+![](/grafiki/m5_p1-agent-ai-diagram.png)
 
 # Czym jest agent AI w kontekście automatyzacji?
 

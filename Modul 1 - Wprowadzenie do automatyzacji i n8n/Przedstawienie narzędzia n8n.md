@@ -1,4 +1,4 @@
-![n8n – automatyzacja dla każdego](/grafiki/m1_p4-n8n-title.png)
+![](/grafiki/m1_p4-n8n-title.png)
 
 n8n to nowoczesne, otwarte narzędzie do automatyzacji procesów i integracji aplikacji, które pozwala tworzyć zaawansowane przepływy pracy bez programowania.
 

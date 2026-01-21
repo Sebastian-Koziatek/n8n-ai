@@ -1,6 +1,6 @@
 # Przegląd najpopularniejszych node'ów
 
-![Kategorie node'ów](/grafiki/node-categories.png)
+![](/grafiki/node-categories.png)
 
 W n8n masz dostęp do setek node'ów. Na początku może to przytłaczać - od czego zacząć? 
 

@@ -15,9 +15,9 @@ Instrukcja jest oparta na realnym procesie debugowania i zawiera wyłącznie kro
 5. **Indentyfikator URL przekieorwanie**: Internet => `https://<twoj-n8n>/rest/oauth2-credential/callback`.
 6. Zapisz.
 
-![Rejestracja aplikacji](/grafiki/microsoft-rejestracja.png)
+![](/grafiki/microsoft-rejestracja.png)
 
-![Rejestracja aplikacji - krok 2](/grafiki/microsoft-rejestracja-2-nowy.png)
+![](/grafiki/microsoft-rejestracja-2-nowy.png)
 
 ---
 
@@ -27,7 +27,7 @@ W **Przeglądzie aplikacji** skopiuj:
 
 * **Identyfikator aplikacji** → używany jako `Client ID`
 
-![Tenant ID](/grafiki/microsoft-tenant-id.png)
+![](/grafiki/microsoft-tenant-id.png)
 
 > ⚠️ **Object ID NIE jest używany w OAuth2**
 
@@ -45,7 +45,7 @@ Przykład:
 Wqf8Q~XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-![Client Secret](/grafiki/microsoft-client-secret.png)
+![](/grafiki/microsoft-client-secret.png)
 
 > 💡 **Ta wartość będzie potrzebna jako Client Secret w konfiguracji n8n.**
 
@@ -72,14 +72,14 @@ Wqf8Q~XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 3. Wybierz **Microsoft Graph**
 4. Wybierz **Delegated permissions** (Uprawnienia delegowane)
 
-![Wybór uprawnień API](/grafiki/microsoft-api-permissions-1.png)
+![](/grafiki/microsoft-api-permissions-1.png)
 
 5. Dodaj wymagane uprawnienia do aplikacji:
    * `User.Read`
    * `Mail.Read`
    * `Mail.Send` (opcjonalnie, jeśli potrzebne wysyłanie wiadomości)
 
-![Dodawanie uprawnień](/grafiki/microsoft-api-permissions-2.png)
+![](/grafiki/microsoft-api-permissions-2.png)
 
 6. Kliknij **Add permissions**
 7. Kliknij **Grant admin consent for [nazwa organizacji]** aby zatwierdzić uprawnienia

@@ -1,4 +1,4 @@
-![n8n Logo](/grafiki/n8n-logo.png)
+![](/grafiki/n8n-logo.png)
 
 # n8n - Instalacja i uruchomienie
 

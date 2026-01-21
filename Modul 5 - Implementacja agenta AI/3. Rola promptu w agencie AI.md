@@ -1,6 +1,6 @@
 3### **Jak AI interpretuje zapytania?**
 
-![Jak AI interpretuje zapytania](/grafiki/blok1-p2-ai-interpretuje-zapytania-title.png)
+![](/grafiki/blok1-p2-ai-interpretuje-zapytania-title.png)
 
 - **Tokenizacja** – Model dzieli zapytanie na mniejsze jednostki językowe zwane tokenami – mogą to być słowa, części słów lub znaki interpunkcyjne. To pierwszy krok przetwarzania tekstu.
 - **Analiza wzorców językowych** – AI rozpoznaje wzorce, schematy gramatyczne i struktury zdaniowe na podstawie danych treningowych. Nie rozumie znaczenia, ale identyfikuje układy znane z przeszłych danych.
@@ -15,7 +15,7 @@
 <div align="center">
 
 ### **Attention**
-![Attention](https://obrazy.sadmin.pl/blok1-p2-attention-title.png)
+![](https://obrazy.sadmin.pl/blok1-p2-attention-title.png)
 
 Mechanizm **attention** pozwala modelowi skupić się na najważniejszych częściach tekstu podczas przetwarzania i generowania odpowiedzi.
 
@@ -49,7 +49,7 @@ Mechanizm attention pozwala modelowi „spojrzeć" na całe zdanie, by określi�
 
 ### **Czym jest „temperature" w promptowaniu AI?**
 
-![Temperature](https://obrazy.sadmin.pl/blok1-p2-temperature-title.png)
+![](https://obrazy.sadmin.pl/blok1-p2-temperature-title.png)
 
 Temperatura określa poziom kreatywności i losowości w odpowiedzi.
 
@@ -90,7 +90,7 @@ Na końcu zapisz swoje wnioski i przygotuj krótkie podsumowanie do omówienia n
 
 ### **Efekt dżina – dlaczego precyzja promptu jest kluczowa?**
 
-![Efekt dżina](https://obrazy.sadmin.pl/blok1-p2-efekt-djina.png)
+![](https://obrazy.sadmin.pl/blok1-p2-efekt-djina.png)
 
 </div>
 
@@ -116,7 +116,7 @@ Dzięki temu unikniemy „efektu dżina” i otrzymamy dokładnie to, czego potr
 ___
 ## Precyzja promptu w agentach AI
 
-![Precyzja promptu w agentach AI](https://obrazy.sadmin.pl/blok1-p4-precyzja-promptu-title.png)
+![](https://obrazy.sadmin.pl/blok1-p4-precyzja-promptu-title.png)
 
 W przypadku klasycznych modeli językowych każde zapytanie możemy doskonalić w trakcie rozmowy – przez iterację, doprecyzowanie, poprawienie błędów. **Założeniem agenta AI jest minimalizacja naszej pracy i kontaktu do absolutnego minimum**. Dążymy do sytuacji, w której wystarczy np. wrzucić notatki ze spotkania, a agent sam wykonuje całą pracę – analizuje, kategoryzuje, tworzy raporty, wysyła powiadomienia. Brak iteracji oznacza, że **prompt musi być precyzyjny od samego początku**, bo agent działa autonomicznie bez naszej korekty.
 
@@ -139,7 +139,7 @@ Prompt: „Jesteś asystentem obsługi klienta. Odpowiadasz TYLKO na pytania dot
 ---
 ## Halucynacje – największe zagrożenie w agentach AI
 
-![Halucynacje](https://obrazy.sadmin.pl/blok1-p4-halucynacje-title.png)
+![](https://obrazy.sadmin.pl/blok1-p4-halucynacje-title.png)
 
 ### Czym są halucynacje AI?
 
@@ -164,7 +164,7 @@ W zwykłej rozmowie z ChatGPT użytkownik **wie**, że rozmawia z AI i może zwe
 
 ## Przykład halucynacji - skrzedełka wieprzowe
 
-![Przykład halucynacji - skrzydełka wieprzowe](https://obrazy.sadmin.pl/blok1-p4-skrzedelka-wieprzowe-title.png)
+![](https://obrazy.sadmin.pl/blok1-p4-skrzedelka-wieprzowe-title.png)
 
 **Prompt użytkownika:**
 ```
@@ -222,7 +222,7 @@ Model nie rozumie rzeczywistości – generuje tekst na podstawie statystycznych
 Stwórz obraz ryby pływającej po wodzie
 ```
 
-![Ryba pływająca po wodze](https://obrazy.sadmin.pl/blok1-p4-ryba-po-wodze-halucynacja.png)
+![](https://obrazy.sadmin.pl/blok1-p4-ryba-po-wodze-halucynacja.png)
 
 **Co się stało?**
 

@@ -1,4 +1,4 @@
-![Jak napisać skuteczny prompt](/grafiki/m5_p3-skuteczny-prompt.png)
+![](/grafiki/m5_p3-skuteczny-prompt.png)
 
 ## 7 elementów skutecznego promptu
 

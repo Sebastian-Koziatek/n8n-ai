@@ -1,5 +1,5 @@
 
-![ChatGPT w przeglądarce vs ChatGPT API](/grafiki/blok1-p6-api-vs-przegladarka-title.png)
+![](/grafiki/blok1-p6-api-vs-przegladarka-title.png)
 
 <div align="center">
 

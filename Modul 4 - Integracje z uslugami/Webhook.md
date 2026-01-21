@@ -1,4 +1,4 @@
-![Webhook w n8n](/grafiki/m4_p1-webhook-title.png)
+![](/grafiki/m4_p1-webhook-title.png)
 
 # Webhook w n8n
 

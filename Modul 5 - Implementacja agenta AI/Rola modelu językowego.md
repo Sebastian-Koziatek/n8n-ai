@@ -1,4 +1,4 @@
-![Rola modelu językowego w agencie AI](/grafiki/m5_p2-model-jezykowy.png)
+![](/grafiki/m5_p2-model-jezykowy.png)
 
 # Rola modelu językowego w agencie AI
 
