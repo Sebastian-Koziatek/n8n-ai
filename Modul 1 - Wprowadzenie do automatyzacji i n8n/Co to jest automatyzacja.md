@@ -1,5 +1,4 @@
-(/grafiki/m1_p1-automatyzacja-schemat.png)
-
+![](/grafiki/m1_p1-automatyzacja-schemat.png))
 # Co to jest automatyzacja?
 
 Automatyzacja to proces, w którym powtarzalne zadania i czynności są wykonywane przez systemy lub narzędzia, zamiast przez człowieka. Celem automatyzacji jest oszczędność czasu, ograniczenie błędów oraz zwiększenie efektywności pracy.
