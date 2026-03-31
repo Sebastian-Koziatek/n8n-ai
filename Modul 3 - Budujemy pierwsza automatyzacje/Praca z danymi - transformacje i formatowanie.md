@@ -1,8 +1,3 @@
-# Praca z danymi - transformacje i formatowanie
-
-<div align="center">
-<img src="https://obrazy.sadmin.pl/formatowanie.png" width="75%">
-</div>
 
 ---
 

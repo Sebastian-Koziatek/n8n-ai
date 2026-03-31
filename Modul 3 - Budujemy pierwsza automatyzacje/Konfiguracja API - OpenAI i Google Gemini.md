@@ -1,7 +1,7 @@
 # Konfiguracja API - OpenAI i Google Gemini
 
 <div align="center">
-<img src="https://obrazy.sadmin.pl/api_gemini_openai.png" width="75%">
+<img src="/grafiki/api_gemini_openai.png" width="75%">
 </div>
 
 ---

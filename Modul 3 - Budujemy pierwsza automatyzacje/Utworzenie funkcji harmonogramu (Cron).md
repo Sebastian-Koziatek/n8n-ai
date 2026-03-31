@@ -1,7 +1,6 @@
-# Utworzenie funkcji harmonogramu (Cron)
 
 <div align="center">
-<img src="https://obrazy.sadmin.pl/m3_p6-cron-harmonogram.png" width="75%">
+<img src="/grafiki/m3_p6-cron-harmonogram.png" width="75%">
 </div>
 
 ---

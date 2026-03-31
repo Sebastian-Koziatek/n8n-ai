@@ -1,5 +1,3 @@
-# BBC RSS
-
 ```json
 {
   "name": "11. BBC RSS",

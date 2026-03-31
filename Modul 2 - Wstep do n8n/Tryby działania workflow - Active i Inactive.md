@@ -1,7 +1,7 @@
 # Tryby działania workflow - Active i Inactive
 
 <div align="center">
-<img src="https://obrazy.sadmin.pl/active_inactive.png" width="75%">
+<img src="/grafiki/active_inactive.png" width="75%">
 </div>
 
 ---
